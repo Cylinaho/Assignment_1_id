@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Documesnt */
+
+h1 {color: #FFF;}
+h2 {color: #002ED3;}
+
+body{
+	background-image: url("images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
