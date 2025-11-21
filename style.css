@@ -4,6 +4,21 @@
 h1 {color: #000;}
 h2 {color: #002ED3;}
 
+/* Using class and ID */
+ .center { text-align: center; }
+ .middle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+.smile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 89%; 
+}
+
 body{
 	background-image: url("images/background.jpg");
 	background-size: cover;
