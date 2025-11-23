@@ -63,6 +63,13 @@ td {
   text-align: center;
 }
 
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
 .text-box {
   background-color: white;
   border: 2px solid #5DADE2; /* light blue border */
@@ -113,11 +120,4 @@ td {
 .right-img {
     width: 500px;
     height: auto;
-}
-
-.first-img {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
 }
