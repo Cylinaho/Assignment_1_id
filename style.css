@@ -63,11 +63,15 @@ td {
   text-align: center;
 }
 
-.layout {
+.row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    gap: 40px;   /* space between text and image */
+    margin-top: 50px;
+}
+
+.right-img {
+    display: block;
 }
 
 .text-box {
@@ -101,11 +105,6 @@ td {
   background-color: #3498DB;
 }
 
-.right-img {
-    width: 500px;
-    height: auto;
-}
-
 .secondtext-box {
   background-color: white;
   border: 2px solid #5DADE2; /* light blue border */
@@ -116,7 +115,7 @@ td {
   margin-top: 50px; /* shifts the box down */
 }
 
-.text-box h1 {
+.secondtext-box h1 {
   font-family: 'Arial Black', sans-serif;
   font-size: 2rem;
   margin: 10px 0;
