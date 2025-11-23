@@ -102,11 +102,16 @@ td {
   max-width: 400px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-top: 50px; /* shifts the box down */
-  
+
 }
 
 .text-box h1 {
   font-family: 'Arial Black', sans-serif;
   font-size: 2rem;
   margin: 10px 0;
+}
+
+.right-img {
+  float: right;
+  margin-left: 20px; /* optional spacing */
 }
