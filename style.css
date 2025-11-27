@@ -1,6 +1,7 @@
 @charset "utf-8";
-/* CSS Documesnt */
+/* CSS Document */
 
+/* HEADINGS */
 h1 {
   color: #000;
 }
@@ -9,23 +10,11 @@ h2 {
   color: #002ED3;
 }
 
-.text-box h1 {
-  font-family: 'Arial Black', sans-serif;
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-/* Using class and ID */
+/* CENTERING CLASSES */
 .center {
   text-align: center;
 }
 
-.middle {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
 
 .smile {
   display: block;
@@ -34,20 +23,30 @@ h2 {
   width: 90%;
 }
 
+.hero-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BACKGROUND */
 body {
   background-image: url("images/background.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* NAVIGATION BAR */
 .navbar ul {
   list-style: none;
   background: #ffffff;
   padding: 0;
   margin: 0;
   text-align: center;
-
 }
 
 .navbar li {
@@ -59,9 +58,9 @@ body {
   color: #3a93ff;
   width: 100px;
   display: flex;
-  justify-content: space-evenly; /* Equal spacing */
+  justify-content: center;
   align-items: center;
-  padding: 20px 85px;
+  padding: 18px 50px;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
@@ -69,32 +68,34 @@ body {
 }
 
 .navbar a:hover {
-  background: #b3d8ff
+  background: #b3d8ff;
 }
 
+/* FIRST SECTION (ROW LAYOUT) */
 .row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
-  /* space between text and image */
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .right-img {
-  display: block;
-  block-size: 0%
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
 }
 
+/* MAIN TEXT BOX */
 .text-box {
   background-color: white;
-  border: 2px solid #5DADE2;
-  /* light blue border */
-  padding: 30px 50px;
+  border: 3px solid #5DADE2;
+  padding: 30px 40px;
   text-align: center;
   max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  /* shifts the box down */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .text-box h1 {
@@ -103,35 +104,108 @@ body {
   margin: 10px 0;
 }
 
+/* EXPLORE BUTTON */
 .explore-btn {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #5DADE2;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .explore-btn:hover {
   background-color: #3498DB;
 }
 
+/* SECOND WHITE TEXT BOX */
 .secondtext-box {
   background-color: white;
-  border: 2px solid #5DADE2;
-  /* light blue border */
-  padding: 30px 50px;
+  border: 3px solid #5DADE2;
+  padding: 30px 40px;
   text-align: center;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  /* shifts the box down */
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .secondtext-box h1 {
   font-family: 'Arial Black', sans-serif;
   font-size: 2rem;
   margin: 10px 0;
+}
+
+/* CENTER IMAGE SECTIONS */
+.center-img {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.center-img img {
+  width: 750px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* BUY BUTTON */
+.buy-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.buy-btn {
+  background: #63A7D8;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #4d8ec3;
+}
+
+/* HOME ICON AT BOTTOM */
+.home-icon {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.home-icon img {
+  width: 60px;
+  transition: 0.3s;
+}
+
+.home-icon img:hover {
+  transform: scale(1.1);
+}
+
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .navbar a {
+    padding: 15px 25px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .right-img {
+    width: 90%;
+  }
+
+  .text-box,
+  .secondtext-box {
+    max-width: 90%;
+  }
 }
