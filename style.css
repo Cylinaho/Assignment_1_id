@@ -59,7 +59,7 @@ body {
   color: #3a93ff;
   width: 100px;
   display: flex;
-  justify-content: space-between; /* Equal spacing */
+  justify-content: space-around; /* Equal spacing */
   align-items: center;
   padding: 25px 20px;
   font-size: 15px;
@@ -70,10 +70,6 @@ body {
 
 .navbar a:hover {
   background: #b3d8ff
-}
-
-td {
-  text-align: center;
 }
 
 .row {
