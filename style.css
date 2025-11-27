@@ -58,7 +58,7 @@ body {
   text-decoration: none;
   color: #3a93ff;
   width: 100px;
-  display: block;
+  display: flex;
   padding: 25px 20px;
   font-size: 15px;
   text-transform: uppercase;
