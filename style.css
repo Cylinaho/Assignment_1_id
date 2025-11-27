@@ -137,36 +137,3 @@ td {
   font-size: 2rem;
   margin: 10px 0;
 }
-
-/* ===== Base Styles ===== */
-.section.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-}
-
-/* ===== Split panels ===== */
-.split {
-  flex: 1;
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  padding: 2rem;
-}
-
-/* ===== Desktop (split) view ===== */
-@media (min-width: 768px) {
-  section.container {
-    flex-direction: row;
-  }
-
-  .split {
-    padding: 4rem;
-  }
-
-  a.button {
-    width: 100%;
-    max-width: 100%;
-  }
-}
