@@ -51,7 +51,7 @@ body {
 }
 
 .navbar li {
-  display: flex;
+  display: inline-flex;
 }
 
 .navbar a {
