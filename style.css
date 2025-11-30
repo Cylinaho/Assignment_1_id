@@ -201,6 +201,7 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     padding: 40px 10%; /* Indent from sides */
+    background-color: #96c9f3;
     margin-top: 50px;
     text-align: left;
 }
@@ -230,7 +231,7 @@ body {
 
 .privacy-link {
     text-decoration: underline;
-    color: #000;
+    color: #001285;
     font-weight: bold;
 }
 
