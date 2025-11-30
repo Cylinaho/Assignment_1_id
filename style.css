@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* GLOBAL RESET */
+* {
+    box-sizing: border-box;
+}
+
 /* HEADINGS */
 h1 {
   color: #000;
@@ -206,4 +211,9 @@ body {
   .secondtext-box {
     max-width: 90%;
   }
+}
+
+/* Video to be center */
+  .video {
+
 }
