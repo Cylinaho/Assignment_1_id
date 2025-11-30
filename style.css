@@ -11,12 +11,8 @@ h1 {
   color: #000;
   font-family: 'Arial Black', sans-serif;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
-
-h2 {
-  color: #002ED3;
-}
-
 
 .smile {
   display: block;
@@ -43,6 +39,13 @@ body {
 }
 
 /* NAVIGATION BAR */
+.navbar {
+    background: #ffffff;
+    /* Optional: Sticky nav if you want it to stay at top */
+    /* position: sticky; top: 0; z-index: 100; */
+}
+
+/* NAVIGATION BAR */
 .navbar ul {
   list-style: none;
   background: #ffffff;
@@ -62,7 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 80px;
+  padding: 30px 120px;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
