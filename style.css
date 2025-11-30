@@ -79,7 +79,7 @@ body {
 /* FIRST SECTION (ROW LAYOUT) */
 .row {
   display: flex ;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 40px;
   margin-top: 50px;
@@ -102,6 +102,7 @@ body {
   margin-right: -20px; /* Slight overlap effect if desired */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 .text-box h1 {
@@ -179,19 +180,16 @@ body {
   background: #4d8ec3;
 }
 
-/* HOME ICON AT BOTTOM */
+/* HOME ICON */
 .home-icon {
-  text-align: center;
-  margin: 40px 0;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .home-icon img {
-  width: 60px;
-  transition: 0.3s;
-}
-
-.home-icon img:hover {
-  transform: scale(1.1);
+    width: 150px; /* Made larger based on video */
+    filter: grayscale(100%) brightness(0); /* Makes it black */
+    cursor: pointer;
 }
 
 
