@@ -14,12 +14,6 @@ h1 {
   line-height: 1.2;
 }
 
-h2 {
-  color: #000;
-  font-family: 'Arial Black', sans-serif;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
 
 /*TOP LOGO */
 .smile {
@@ -73,8 +67,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 120px;
-  font-size: 15px;
+  padding: 20px 120px;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -220,7 +214,7 @@ body {
 .main-footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex;
     padding: 0px 10%; /* Indent from sides */
     background-color: #96c9f3;
     margin-top: 50px;
