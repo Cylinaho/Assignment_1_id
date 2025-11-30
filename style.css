@@ -98,6 +98,8 @@ body {
   padding: 30px 40px;
   text-align: center;
   max-width: 400px;
+  z-index: 2; /* Ensures box stays above image if they overlap */
+  margin-right: -20px; /* Slight overlap effect if desired */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -193,27 +195,68 @@ body {
 }
 
 
-/* RESPONSIVE FIXES */
-@media (max-width: 768px) {
-  .navbar a {
-    padding: 15px 25px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .right-img {
-    width: 90%;
-  }
-
-  .text-box,
-  .secondtext-box {
-    max-width: 90%;
-  }
+/* FOOTER */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 40px 10%; /* Indent from sides */
+    margin-top: 50px;
+    text-align: left;
 }
 
-/* Video to be center */
-  .video {
+.footer-left .footer-brand-logo {
+    width: 120px; /* Adjust size of '02' logo */
+    display: block;
+}
 
+.footer-right {
+    text-align: right;
+    font-size: 14px;
+    color: #000;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.footer-right p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.privacy-link {
+    text-decoration: underline;
+    color: #000;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+
+    .text-box {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-right {
+        text-align: center;
+    }
 }
