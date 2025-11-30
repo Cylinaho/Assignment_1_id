@@ -158,21 +158,36 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* VIDEO */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.video-container iframe {
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
 /* BUY BUTTON */
 .buy-section {
   text-align: center;
-  margin: 40px 0;
+  margin-bottom: 30px 0;
 }
 
 .buy-btn {
   background: #63A7D8;
   color: white;
   border: none;
-  padding: 30px 60px;
-  font-size: 18px;
+  padding: 30px 90px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: 0.3s;
 }
 
