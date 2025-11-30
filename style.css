@@ -198,25 +198,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 40px 10%; /* Indent from sides */
+    padding: 0px 10%; /* Indent from sides */
     background-color: #96c9f3;
     margin-top: 50px;
     text-align: left;
 }
 
 .footer-left .footer-brand-logo {
-    width: 120px; /* Adjust size of '02' logo */
+    width: 400px; /* Adjust size of '02' logo */
     display: block;
 }
 
 .footer-right {
-    text-align: right;
-    font-size: 14px;
+    text-align: left;
+    font-size: 24px;
     color: #000;
 }
 
 .footer-right h3 {
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
     font-family: 'Arial Black', sans-serif;
