@@ -3,309 +3,361 @@
 
 /* GLOBAL RESET */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* BACKGROUND & FONTS */
+/* BACKGROUND */
 body {
-    background-image: url("images/background.jpg");
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
 /* HEADINGS */
-h1, h2, h3 {
-    font-family: 'Arial Black', sans-serif;
-    line-height: 1.2;
-}
-
-/* TOP LOGO */
-.hero-logo {
-    width: 100%;
-    height: auto;
-    display: block;
+h1,
+h2,
+h3 {
+  font-family: 'Arial Black', sans-serif;
+  line-height: 1.2;
 }
 
 /* NAVIGATION BAR */
 .navbar {
-    background: #ffffff;
+  background: #ffffff;
 }
 
 .navbar ul {
-    list-style: none;
-    background: #ffffff;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  list-style: none;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .navbar li {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #3a93ff;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 120px;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
+  text-decoration: none;
+  color: #3a93ff;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 120px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
 }
 
 .navbar a:hover {
-    background: #b3d8ff;
+  background: #b3d8ff;
 }
 
-/* --- PAGE LAYOUT FEATURES --- */
+/* --- PAGE LAYOUT --- */
 
 /* 1. HERO IMAGE SECTION */
 .hero-section {
-    width: 100%;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center; 
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.full-width-img, .hero-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.hero-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.full-width-img,
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 2. MAIN WRAPPER */
 .content-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1100px;
+  /* Wider to fit side-by-side boxes */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* 3. SECTION TITLES (The Pills) */
-.section-header, .pill-title {
-    text-align: center;
-    margin: 40px 0 20px 0;
+/* 3. SECTION TITLES (THE PILLS) */
+.section-header,
+.pill-title {
+  text-align: center;
+  margin: 50px 0 30px 0;
 }
 
-.section-header h2, .pill-title h2 {
-    display: inline-block;
-    background-color: #fff;
-    /* This makes the pill rounded and bordered like the reference */
-    border: 3px solid #5aaaf4; 
-    padding: 15px 80px;
-    border-radius: 50px; 
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
-    margin: 0;
+.section-header h2,
+.pill-title h2 {
+  display: inline-block;
+  background-color: #fff;
+  /* Blue border for the title pill */
+  border: 3px solid #3fa9f5;
+  padding: 15px 80px;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-/* 4. THE CONTENT BOXES (Fixing Size and Missing Fandom Box) */
-/* I added .info-card and .blue-border-card here so your fandom box shows up! */
-.content-card, .info-card, .blue-border-card, .debut-card, .awards-card {
-    background-color: white;
-    /* Uniform Blue Border for all boxes */
-    border: 3px solid #5aaaf4; 
-    border-radius: 30px; /* Nice round corners */
-    /* Padding 50px makes the box big and spacious */
-    padding: 50px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+/* 4. CONTENT BOXES (EXACT MATCH TO PIC) */
+/* Apply this style to ALL box classes found in your HTML */
+.content-card,
+.info-card,
+.blue-border-card,
+.debut-card,
+.awards-card {
+  background-color: white;
+  /* The specific light blue border from the image */
+  border: 3px solid #3fa9f5;
+  border-radius: 25px;
+  padding: 50px;
+  margin-bottom: 40px;
+  /* Clean look, no shadow inside the white area */
 }
 
-/* 5. FLEX LAYOUT (Fixing Alignment) */
+/* 5. FLEX LAYOUT (ALIGNMENT FIX) */
 .flex-row {
-    display: flex;
-    align-items: center; /* This forces the Image and Text to align in the middle vertically */
-    gap: 50px; /* Space between image and text */
+  display: flex;
+  /* This centers the Image and Text vertically */
+  align-items: center;
+  gap: 60px;
+  /* Big gap between image and text */
 }
 
-/* LEFT SIDE (Images/Logos) */
-.card-left-visual, .card-left, .centered-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Left Side (Image) */
+.card-left-visual,
+.card-left,
+.centered-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Make sure logos and badges fit */
-.card-left-visual img, .about-logo-img, .onedoor-badge-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Ensure images (like the Onedoor badge) don't overflow */
+.card-left-visual img,
+.about-logo-img,
+.onedoor-badge-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* RIGHT SIDE (Text) */
-.card-right-text, .card-right {
-    flex: 2; /* Gives text more space than the image */
+/* Right Side (Text) */
+.card-right-text,
+.card-right {
+  flex: 2;
 }
 
-.card-right-text p, .card-right p {
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: justify; /* Keeps text neat */
-    color: #333;
-    margin-bottom: 10px;
+.card-right-text p,
+.card-right p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+  color: #000;
+  margin-bottom: 20px;
 }
 
-/* 6. TEXT COLORS & TITLES */
-.blue-text, .cyan-title {
-    color: #00c3e3; /* Cyan color matching the reference */
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-size: 1.2rem;
+/* Fandom Title Color */
+.blue-text,
+.cyan-title {
+  color: #009eb3;
+  /* Cyan/Teal color matching picture */
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-/* 7. SPLIT SECTION (Debut & Awards) */
+/* 6. SPLIT SECTION (DEBUT & AWARDS) */
 .split-section {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 30px;
+  /* Space between Debut box and Awards box */
 }
 
+/* --- DEBUT BOX SPECIFICS --- */
 .debut-card {
-    flex: 1;
-    display: flex; /* Centers content */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  flex: 0 0 250px;
+  /* Fixed width for Debut box like the pic */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 250px;
+  /* Makes it square-ish */
 }
 
 .debut-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .debut-card p {
-    font-size: 1.4rem;
-    color: #333;
-    font-weight: bold;
+  font-size: 1.5rem;
+  /* Big date text */
+  margin: 0;
+  font-weight: normal;
 }
 
+/* --- AWARDS BOX SPECIFICS --- */
 .awards-card {
-    flex: 3;
+  flex: 1;
+  /* Takes up remaining space */
 }
 
+.awards-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.award-year-group,
 .award-year {
-    margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-.year, .year-label {
-    display: block;
-    color: #5aaaf4; /* Blue color for year */
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.year,
+.year-label {
+  display: block;
+  color: #3fa9f5;
+  /* Blue year matching border */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
 .awards-card ul {
-    list-style: none;
-    padding-left: 0;
-    line-height: 1.6;
+  list-style: none;
+  /* REMOVES BULLET POINTS LIKE THE PIC */
+  padding-left: 0;
+  margin: 0;
 }
 
-/* 8. ALBUM GRID */
+.awards-card li {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  /* Slightly bold text like pic */
+  margin-bottom: 3px;
+}
+
+/* 7. ALBUM GRID */
 .album-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
 .album-grid img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
 }
 
 .album-grid img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* HOME ICON */
 .home-icon {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .home-icon img {
-    width: 150px; 
-    filter: grayscale(100%) brightness(0);
-    cursor: pointer;
+  width: 150px;
+  filter: grayscale(100%) brightness(0);
+  cursor: pointer;
 }
 
 /* FOOTER */
 .main-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 10%; 
-    background-color: #96c9f3;
-    margin-top: 50px;
-    text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%;
+  background-color: #96c9f3;
+  margin-top: 50px;
+  text-align: left;
 }
 
 .footer-left .footer-brand-logo {
-    width: 400px;
-    display: block;
+  width: 400px;
+  display: block;
 }
 
 .footer-right {
-    text-align: left;
-    font-size: 24px;
-    color: #000;
+  text-align: left;
+  font-size: 24px;
+  color: #000;
 }
 
 .footer-right h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Arial Black', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Arial Black', sans-serif;
 }
 
 .footer-right p {
-    margin: 5px 0;
-    line-height: 1.4;
+  margin: 5px 0;
+  line-height: 1.4;
 }
 
 .privacy-link {
-    text-decoration: underline;
-    color: #001285;
-    font-weight: bold;
+  text-decoration: underline;
+  color: #001285;
+  font-weight: bold;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-    }
-    
-    .flex-row, .split-section {
-        flex-direction: column;
-    }
+  .navbar ul {
+    flex-direction: column;
+  }
 
-    .album-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .flex-row,
+  .split-section {
+    flex-direction: column;
+  }
 
-    .main-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .footer-right {
-        text-align: center;
-    }
+  .debut-card {
+    width: 100%;
+    /* Full width on mobile */
+    height: auto;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
 }
