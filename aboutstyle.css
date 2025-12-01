@@ -89,7 +89,6 @@ h3 {
 /* 2. MAIN WRAPPER */
 .content-wrapper {
   max-width: 1100px;
-  /* Wider to fit side-by-side boxes */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -105,10 +104,9 @@ h3 {
 .pill-title h2 {
   display: inline-block;
   background-color: #fff;
-  /* Blue border for the title pill */
   border: 3px solid #3fa9f5;
-  padding: 15px 80px;
-  border-radius: 50px;
+  padding: 30px 150px;
+  border-radius: 20px;
   font-size: 1.8rem;
   text-transform: uppercase;
   margin: 0;
@@ -193,7 +191,6 @@ h3 {
 /* --- DEBUT BOX SPECIFICS --- */
 .debut-card {
   flex: 0 0 250px;
-  /* Fixed width for Debut box like the pic */
   display: flex;
   flex-direction: column;
   justify-content: center;
