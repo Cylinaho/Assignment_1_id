@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* GLOBAL RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BACKGROUND & FONTS */
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: 'Arial Black', sans-serif;
+    line-height: 1.2;
+}
+
+/* LOGO */
+.hero-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* NAVIGATION BAR */
+.navbar { background: #ffffff; }
+.navbar ul {
+    list-style: none;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.navbar li { display: inline-flex; }
+.navbar a {
+    text-decoration: none;
+    color: #3a93ff;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 120px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.navbar a:hover { background: #b3d8ff; }
+
+/* --- CONTACT PAGE SPECIFIC STYLES --- */
+
+/* 1. DARK HERO SECTION */
+.contact-hero {
+    width: 100%;
+    height: 400px; /* Adjust height based on preference */
+    background-color: #333; /* Fallback color */
+    /* Replace 'acoustic_foam.jpg' with your dark background image */
+    background-image: url("images/acoustic_foam.jpg"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-white-logo {
+    width: 250px; /* Adjust size of the white logo */
+    height: auto;
+}
+
+/* 2. TEXT SECTION (White Background) */
+.mission-section {
+    background-color: white;
+    padding: 60px 20px;
+    width: 100%;
+    margin-bottom: 40px;
+    /* Optional: Border bottom to separate from blue texture */
+    border-bottom: 1px solid #ddd; 
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* The Big Blue Headline */
+.mission-section h1 {
+    color: #3a93ff; /* The specific blue from the video */
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* The Bold Subtext */
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* The Description Paragraph */
+.description {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* 3. SOCIAL ICONS (Aligned Right) */
+.social-icons-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns icons to the RIGHT */
+    gap: 15px; /* Space between icons */
+    margin-top: 20px;
+}
+
+.social-icons-container img {
+    width: 50px; /* Size of the square icons */
+    height: 50px;
+    border-radius: 10px; /* Rounded corners like iOS icons */
+    transition: transform 0.2s;
+}
+
+.social-icons-container img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+
+/* --- HOME ICON & FOOTER --- */
+.home-icon {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.home-icon img {
+    width: 150px; 
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%; 
+    background-color: #96c9f3;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.footer-left .footer-brand-logo { width: 400px; display: block; }
+.footer-right { text-align: left; font-size: 24px; color: #000; }
+.footer-right h3 { font-size: 28px; font-weight: bold; margin-bottom: 10px; font-family: 'Arial Black', sans-serif; }
+.footer-right p { margin: 5px 0; line-height: 1.4; }
+.privacy-link { text-decoration: underline; color: #001285; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar ul { flex-direction: column; }
+    .mission-section h1 { font-size: 1.8rem; }
+    .social-icons-container { justify-content: center; } /* Center icons on mobile */
+    .main-footer { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .footer-right { text-align: center; }
+}
