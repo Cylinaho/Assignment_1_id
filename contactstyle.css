@@ -32,6 +32,7 @@ h1, h2, h3 {
 
 /* NAVIGATION BAR */
 .navbar { background: #ffffff; }
+
 .navbar ul {
     list-style: none;
     background: #ffffff;
@@ -40,6 +41,7 @@ h1, h2, h3 {
     text-align: center;
 }
 .navbar li { display: inline-flex; }
+
 .navbar a {
     text-decoration: none;
     color: #3a93ff;
@@ -57,43 +59,44 @@ h1, h2, h3 {
 
 /* --- CONTACT PAGE SPECIFIC STYLES --- */
 
-/* 1. DARK HERO SECTION */
+/* 1. DARK HERO SECTION (BIGGER) */
 .contact-hero {
     width: 100%;
-    height: 400px; /* Adjust height based on preference */
-    background-color: #333; /* Fallback color */
-    /* Replace 'acoustic_foam.jpg' with your dark background image */
-    background-image: url("images/acoustic_foam.jpg"); 
+    /* CHANGED: Increased height to make the section bigger */
+    height: 600px; 
+    background-color: #333; 
+    /* Replace with your acoustic foam image */
+    background-image: url("images/contactimg.png"); 
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .center-white-logo {
-    width: 250px; /* Adjust size of the white logo */
+    width: 300px; 
     height: auto;
 }
 
-/* 2. TEXT SECTION (White Background) */
+/* 2. TEXT SECTION (CENTERED WHITE BOX WITH BORDER) */
 .mission-section {
     background-color: white;
-    padding: 60px 20px;
-    width: 100%;
-    margin-bottom: 40px;
-    /* Optional: Border bottom to separate from blue texture */
-    border-bottom: 1px solid #ddd; 
+    border: 3px solid #3fa9f5;
+    border-radius: 25px;
+    padding: 60px 80px;
+    max-width: 1100px; /* Limits width so it's not full screen */
+    margin: 0 auto 50px auto; /* Centers the box in the middle of the page */
 }
 
 .content-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 /* The Big Blue Headline */
 .mission-section h1 {
-    color: #3a93ff; /* The specific blue from the video */
+    color: #114e98; 
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 30px;
@@ -102,7 +105,7 @@ h1, h2, h3 {
 
 /* The Bold Subtext */
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #000;
     margin-bottom: 30px;
@@ -121,19 +124,19 @@ h1, h2, h3 {
 .social-icons-container {
     display: flex;
     justify-content: flex-end; /* Aligns icons to the RIGHT */
-    gap: 15px; /* Space between icons */
+    gap: 15px; 
     margin-top: 20px;
 }
 
 .social-icons-container img {
-    width: 50px; /* Size of the square icons */
+    width: 50px; 
     height: 50px;
-    border-radius: 10px; /* Rounded corners like iOS icons */
+    border-radius: 10px;
     transition: transform 0.2s;
 }
 
 .social-icons-container img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1); 
 }
 
 
@@ -167,8 +170,11 @@ h1, h2, h3 {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .navbar ul { flex-direction: column; }
+    .contact-hero { height: 300px; }
+    .center-white-logo { width: 250px; }
+    .mission-section { padding: 40px 20px; width: 90%; }
     .mission-section h1 { font-size: 1.8rem; }
-    .social-icons-container { justify-content: center; } /* Center icons on mobile */
+    .social-icons-container { justify-content: center; } 
     .main-footer { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .footer-right { text-align: center; }
 }
