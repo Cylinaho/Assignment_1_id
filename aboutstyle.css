@@ -6,31 +6,15 @@
     box-sizing: border-box;
 }
 
-/*TOP LOGO */
-.smile {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-
-.hero-logo {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
 /* BACKGROUND & FONTS */
-/* Updated to match the light blue texture of the new image */
 body {
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* HEADINGS */
@@ -39,56 +23,73 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-/* NAVIGATION BAR */
-.navbar {
-    background: #ffffff;
-    /* Optional: Sticky nav if you want it to stay at top */
-    /* position: sticky; top: 0; z-index: 100; */
+/* TOP LOGO */
+.smile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
-/* NAVIGATION BAR */
-.navbar ul {
-  list-style: none;
-  background: #ffffff;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.navbar li {
-  display: inline-flex;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #3a93ff;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 120px;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-}
-
-.navbar a:hover {
-  background: #b3d8ff;
-}
-/* --- NEW PAGE LAYOUT FEATURES --- */
-
-/* 1. HERO IMAGE SECTION */
-.hero-section {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.hero-img {
+.hero-logo {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background: #ffffff;
+}
+
+.navbar ul {
+    list-style: none;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3a93ff;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 120px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background: #b3d8ff;
+}
+
+/* --- NEW PAGE LAYOUT FEATURES --- */
+
+/* 1. HERO IMAGE SECTION (FIXED CENTERING) */
+.hero-section {
+    width: 100%;
+    margin-bottom: 30px;
+    /* This centers the inner image */
+    display: flex;
+    justify-content: center;
+}
+
+/* Matches HTML class "full-width-img" */
+.full-width-img {
+    max-width: 100%; /* Prevents it from being wider than screen */
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Optional: Makes corners nice */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* 2. MAIN WRAPPER */
@@ -98,13 +99,13 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-/* 3. PILL TITLES (White rounded headers) */
-.pill-title {
+/* 3. SECTION HEADER (Matches HTML "section-header") */
+.section-header {
     text-align: center;
     margin: 40px 0 20px 0;
 }
 
-.pill-title h2 {
+.section-header h2 {
     display: inline-block;
     background-color: #fff;
     padding: 12px 60px;
@@ -115,8 +116,8 @@ h1, h2, h3 {
     margin: 0;
 }
 
-/* 4. INFO CARDS (The white rounded boxes) */
-.info-card {
+/* 4. CONTENT CARDS (Matches HTML "content-card") */
+.content-card {
     background-color: white;
     border-radius: 20px;
     padding: 40px;
@@ -130,43 +131,44 @@ h1, h2, h3 {
     gap: 40px;
 }
 
-.centered-content {
+/* Matches HTML "card-left-visual" */
+.card-left-visual {
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the logo inside the left side */
     align-items: center;
 }
 
-.card-left {
-    flex: 1;
+.card-left-visual img {
+    max-width: 160px;
+    height: auto;
 }
 
-.card-right {
+/* Matches HTML "card-right-text" */
+.card-right-text {
     flex: 3;
 }
 
-.card-right p {
+.card-right-text p {
     font-size: 0.95rem;
     line-height: 1.6;
     text-align: justify;
 }
 
-/* Specific: About Logo */
-.about-logo-img {
-    max-width: 160px;
-    height: auto;
-}
+/* FANDOM SECTION SPECIFICS */
 
-/* Specific: Blue Border for Fandom Section */
-.blue-border-card {
+/* Matches HTML "highlight-blue-border" */
+.highlight-blue-border {
     border: 3px solid #add8e6; /* Light blue border */
 }
 
-.cyan-title {
-    color: #2ad4d6;
+/* Matches HTML "blue-text" */
+.blue-text {
+    color: #2ad4d6; /* Cyan color */
     margin-bottom: 15px;
 }
 
-/* 5. ONEDOOR BADGE */
+/* ONEDOOR BADGE */
 .onedoor-badge {
     width: 180px;
     text-align: center;
@@ -198,7 +200,15 @@ h1, h2, h3 {
     gap: 20px;
 }
 
-.debut-box {
+/* Helper to make debut/award boxes white (since they don't have content-card class in HTML) */
+.debut-card, .awards-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.debut-card {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -207,28 +217,28 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.debut-date {
+.debut-card p {
     font-size: 1.2rem;
     margin-top: 10px;
     color: #555;
 }
 
-.awards-box {
+.awards-card {
     flex: 3;
 }
 
-.award-year-group {
+.award-year {
     margin-bottom: 20px;
 }
 
-.year-label {
+.year {
     display: block;
     color: #3a93ff;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.awards-box ul {
+.awards-card ul {
     list-style: none;
     padding-left: 0;
     font-size: 0.9rem;
@@ -254,42 +264,42 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
-/* --- HOME ICON (KEPT FROM YOUR CODE) --- */
+/* HOME ICON */
 .home-icon {
     text-align: center;
     margin-bottom: 60px;
 }
 
 .home-icon img {
-    width: 60px; /* Adjusted size slightly */
-    filter: grayscale(100%) brightness(0);
+    width: 150px; 
+    filter: grayscale(100%) brightness(0); /* Makes it black */
     cursor: pointer;
 }
 
-/* --- FOOTER (KEPT FROM YOUR CODE) --- */
+/* FOOTER */
 .main-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Changed to center alignment */
-    padding: 40px 10%;
+    align-items: center;
+    padding: 40px 10%; 
     background-color: #96c9f3;
     margin-top: 50px;
     text-align: left;
 }
 
 .footer-left .footer-brand-logo {
-    width: 150px; /* Adjusted: 400px is very large for a logo */
+    width: 400px;
     display: block;
 }
 
 .footer-right {
-    text-align: right; /* Aligned right to match typical layout */
-    font-size: 14px; /* Reduced font size to look like the image */
+    text-align: left;
+    font-size: 24px;
     color: #000;
 }
 
 .footer-right h3 {
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
     font-family: 'Arial Black', sans-serif;
@@ -302,4 +312,32 @@ h1, h2, h3 {
 
 .privacy-link {
     text-decoration: underline;
-    color: #0
+    color: #001285;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    
+    .flex-row, .split-section {
+        flex-direction: column;
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-right {
+        text-align: center;
+    }
+}
