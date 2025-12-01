@@ -24,13 +24,6 @@ h1, h2, h3 {
 }
 
 /* TOP LOGO */
-.smile {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
 .hero-logo {
     width: 100%;
     height: auto;
@@ -72,155 +65,130 @@ h1, h2, h3 {
     background: #b3d8ff;
 }
 
-/* --- NEW PAGE LAYOUT FEATURES --- */
+/* --- PAGE LAYOUT FEATURES --- */
 
-/* 1. HERO IMAGE SECTION (FIXED CENTERING) */
+/* 1. HERO IMAGE SECTION */
 .hero-section {
     width: 100%;
     margin-bottom: 30px;
-    /* This centers the inner image */
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
-/* Matches HTML class "full-width-img" */
-.full-width-img {
-    max-width: 100%; /* Prevents it from being wider than screen */
+.full-width-img, .hero-img {
+    max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px; /* Optional: Makes corners nice */
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* 2. MAIN WRAPPER */
 .content-wrapper {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* 3. SECTION HEADER (Matches HTML "section-header") */
-.section-header {
+/* 3. SECTION TITLES (The Pills) */
+.section-header, .pill-title {
     text-align: center;
     margin: 40px 0 20px 0;
 }
 
-.section-header h2 {
+.section-header h2, .pill-title h2 {
     display: inline-block;
     background-color: #fff;
-    padding: 12px 60px;
-    border-radius: 40px;
+    /* This makes the pill rounded and bordered like the reference */
+    border: 3px solid #5aaaf4; 
+    padding: 15px 80px;
+    border-radius: 50px; 
     font-size: 1.8rem;
     text-transform: uppercase;
     box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
     margin: 0;
 }
 
-/* 4. CONTENT CARDS (Matches HTML "content-card") */
-.content-card {
+/* 4. THE CONTENT BOXES (Fixing Size and Missing Fandom Box) */
+/* I added .info-card and .blue-border-card here so your fandom box shows up! */
+.content-card, .info-card, .blue-border-card, .debut-card, .awards-card {
     background-color: white;
-    border-radius: 20px;
-    padding: 40px;
+    /* Uniform Blue Border for all boxes */
+    border: 3px solid #5aaaf4; 
+    border-radius: 30px; /* Nice round corners */
+    /* Padding 50px makes the box big and spacious */
+    padding: 50px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
 }
 
+/* 5. FLEX LAYOUT (Fixing Alignment) */
 .flex-row {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: center; /* This forces the Image and Text to align in the middle vertically */
+    gap: 50px; /* Space between image and text */
 }
 
-/* Matches HTML "card-left-visual" */
-.card-left-visual {
+/* LEFT SIDE (Images/Logos) */
+.card-left-visual, .card-left, .centered-content {
     flex: 1;
     display: flex;
-    justify-content: center; /* Centers the logo inside the left side */
+    justify-content: center;
     align-items: center;
 }
 
-.card-left-visual img {
-    max-width: 160px;
+/* Make sure logos and badges fit */
+.card-left-visual img, .about-logo-img, .onedoor-badge-img {
+    max-width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Matches HTML "card-right-text" */
-.card-right-text {
-    flex: 3;
+/* RIGHT SIDE (Text) */
+.card-right-text, .card-right {
+    flex: 2; /* Gives text more space than the image */
 }
 
-.card-right-text p {
-    font-size: 0.95rem;
+.card-right-text p, .card-right p {
+    font-size: 1rem;
     line-height: 1.6;
-    text-align: justify;
+    text-align: justify; /* Keeps text neat */
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* FANDOM SECTION SPECIFICS */
-
-/* Matches HTML "highlight-blue-border" */
-.highlight-blue-border {
-    border: 3px solid #add8e6; /* Light blue border */
-}
-
-/* Matches HTML "blue-text" */
-.blue-text {
-    color: #2ad4d6; /* Cyan color */
+/* 6. TEXT COLORS & TITLES */
+.blue-text, .cyan-title {
+    color: #00c3e3; /* Cyan color matching the reference */
     margin-bottom: 15px;
-}
-
-/* ONEDOOR BADGE */
-.onedoor-badge {
-    width: 180px;
-    text-align: center;
-    border: 2px solid white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 0 3px #2ad4d6; /* The cyan outline effect */
-}
-
-.badge-top {
-    background-color: #2ad4d6;
-    color: white;
-    padding: 8px;
-    font-size: 0.9rem;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.badge-bottom {
-    background-color: white;
-    color: #2ad4d6;
-    font-size: 1.4rem;
-    font-weight: 900;
-    padding: 15px 0;
-}
-
-/* 6. SPLIT SECTION (Debut & Awards) */
+/* 7. SPLIT SECTION (Debut & Awards) */
 .split-section {
     display: flex;
     gap: 20px;
 }
 
-/* Helper to make debut/award boxes white (since they don't have content-card class in HTML) */
-.debut-card, .awards-card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
 .debut-card {
     flex: 1;
-    display: flex;
+    display: flex; /* Centers content */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+.debut-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 .debut-card p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #555;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
 }
 
 .awards-card {
@@ -228,27 +196,27 @@ h1, h2, h3 {
 }
 
 .award-year {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-.year {
+.year, .year-label {
     display: block;
-    color: #3a93ff;
+    color: #5aaaf4; /* Blue color for year */
     font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
 .awards-card ul {
     list-style: none;
     padding-left: 0;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* 7. ALBUM GRID */
+/* 8. ALBUM GRID */
 .album-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-bottom: 50px;
 }
@@ -272,7 +240,7 @@ h1, h2, h3 {
 
 .home-icon img {
     width: 150px; 
-    filter: grayscale(100%) brightness(0); /* Makes it black */
+    filter: grayscale(100%) brightness(0);
     cursor: pointer;
 }
 
