@@ -6,6 +6,21 @@
     box-sizing: border-box;
 }
 
+/*TOP LOGO */
+.smile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* BACKGROUND & FONTS */
 /* Updated to match the light blue texture of the new image */
 body {
@@ -24,44 +39,43 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-/* --- NAVIGATION BAR (KEPT FROM YOUR CODE) --- */
+/* NAVIGATION BAR */
 .navbar {
     background: #ffffff;
-    border-bottom: 4px solid #3a93ff; /* Added the blue line from the image */
+    /* Optional: Sticky nav if you want it to stay at top */
+    /* position: sticky; top: 0; z-index: 100; */
 }
 
+/* NAVIGATION BAR */
 .navbar ul {
-    list-style: none;
-    background: #ffffff;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    display: flex; /* Ensure horizontal layout */
-    justify-content: center;
+  list-style: none;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .navbar li {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #3a93ff;
-    width: 100px; /* Kept your sizing */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 60px; /* Reduced padding slightly to fit screen better */
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
+  text-decoration: none;
+  color: #3a93ff;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 120px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
 }
 
 .navbar a:hover {
-    background: #b3d8ff;
+  background: #b3d8ff;
 }
-
 /* --- NEW PAGE LAYOUT FEATURES --- */
 
 /* 1. HERO IMAGE SECTION */
