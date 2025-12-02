@@ -31,7 +31,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* NAVIGATION BAR (Unchanged) */
+/* NAVIGATION BAR */
 .navbar {
     background: #ffffff;
 }
@@ -75,46 +75,44 @@ body {
 
 .members-title h1 {
     background: white;
-    /* Removed blue border to match reference image style exactly, add it back if you prefer */
+    /* FIXED: Added solid border style and width so the color shows up */
+    border: 5px solid #3a93ff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: inline-block;
     padding: 30px 150px;
-    border-radius: 8px;
-    border-color: #3a93ff;
+    border-radius: 15px;
+    /* Slightly more rounded */
     font-family: 'Arial Black', sans-serif;
-    font-size: 40px;
+    font-size: 45px;
+    /* Made title slightly bigger too */
     letter-spacing: 2px;
 }
 
 /* MEMBERS CONTAINER */
 #members-container {
     width: 80%;
-    /* Made slightly wider to fit 3 columns */
     margin: 0 auto;
 }
 
-/* MEMBER CARD (The New 3-Column Layout) */
+/* MEMBER CARD */
 .member-card {
     display: flex;
-    /* Makes the card flexible */
     flex-direction: row;
     background: white;
     border: 3px solid #b3d8ff;
-    /* Light blue border */
-    padding: 25px;
+    padding: 30px;
+    /* Increased padding slightly */
     border-radius: 20px;
     margin-bottom: 35px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
-    /* Aligns items to the top */
-    gap: 20px;
-    /* Space between columns */
+    gap: 30px;
+    /* Increased gap between columns */
 }
 
 /* COLUMN 1: IMAGE */
 .member-photo {
-    width: 180px;
-    /* Fixed width for photo */
+    width: 250px;
     height: auto;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -123,16 +121,16 @@ body {
 /* COLUMN 2: INFO (Middle) */
 .member-info-middle {
     flex: 1.2;
-    /* Takes up slightly more space */
     text-align: left;
 }
 
+/* --- UPDATED: BIGGER NAME --- */
 .member-info-middle h2 {
     font-family: 'Arial Black', sans-serif;
     color: #d32b2b;
-    /* Red color for name */
-    margin: 0 0 15px 0;
-    font-size: 32px;
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    /* Increased from 32px to 48px */
     text-transform: uppercase;
 }
 
@@ -142,41 +140,47 @@ body {
     list-style: none;
 }
 
+/* --- UPDATED: BIGGER INFO TEXT --- */
 .member-info-middle li {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 4px;
+    font-size: 20px;
+    /* Increased from 14px to 20px */
+    line-height: 1.6;
+    margin-bottom: 8px;
     color: #333;
 }
 
 /* COLUMN 3: FACTS (Right) */
 .member-facts-right {
     flex: 1;
-    /* Takes up remaining space */
-    border-left: 1px solid #eee;
-    /* Optional divider line */
-    padding-left: 20px;
+    border-left: 2px solid #eee;
+    /* Made divider slightly thicker */
+    padding-left: 25px;
 }
 
+/* --- UPDATED: BIGGER FACTS TITLE --- */
 .facts-title {
     font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    /* Increased from 16px to 22px */
+    margin-bottom: 15px;
     display: block;
     color: #000;
+    text-decoration: underline;
+    /* Optional: underlines "Facts:" */
 }
 
 .member-facts-right ul {
-    padding-left: 15px;
+    padding-left: 20px;
     margin: 0;
 }
 
+/* --- UPDATED: BIGGER FACTS TEXT --- */
 .member-facts-right li {
-    font-size: 13px;
-    line-height: 1.4;
-    margin-bottom: 5px;
+    font-size: 18px;
+    /* Increased from 13px to 18px */
+    line-height: 1.5;
+    margin-bottom: 8px;
     list-style-type: disc;
-    /* Bullet points for facts */
     color: #444;
 }
 
@@ -200,12 +204,11 @@ body {
 
     .member-facts-right {
         border-left: none;
-        border-top: 1px solid #eee;
+        border-top: 2px solid #eee;
         padding-left: 0;
         padding-top: 20px;
         width: 100%;
         text-align: left;
-        /* Keep lists readable on mobile */
     }
 }
 
@@ -222,7 +225,7 @@ body {
     cursor: pointer;
 }
 
-/* FOOTER (Unchanged) */
+/* FOOTER */
 .main-footer {
     display: flex;
     justify-content: space-between;
