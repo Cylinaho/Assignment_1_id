@@ -199,6 +199,14 @@ body {
   background: #4d8ec3;
 }
 
+/* --- IMPORTANT FIX: LINK STYLING --- */
+/* This prevents the first clickable product from looking like a text link */
+a.product-item {
+    text-decoration: none; /* Removes underline */
+    color: inherit;        /* Keeps original colors */
+    display: center;         /* Ensures it keeps the box shape */
+}
+
 /* HOME ICON */
 .home-icon {
     text-align: center;

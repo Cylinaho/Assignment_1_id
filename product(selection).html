@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOYNEXTDOOR - Shop</title>
-    <link href="product(selection).css" rel="stylesheet">
+    <link href="product(options).css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="top-nav">
-        <a href="Index.html" class="back-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </a>
-        
+        <a href="Index.html" class="back-button">&lt;</a>
+
         <div class="logo-container">
             <img src="images/bndlogowhite.png" alt="BOYNEXTDOOR Logo" class="header-logo">
         </div>
 
-        <div class="cart-icon">
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="#6CB4EE" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 6H18L19 20H5L6 6Z" stroke="#6CB4EE" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M9 6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6" stroke="#6CB4EE" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-        </div>
+        <div class="cart-container">
+            <a href="cart.html">
+                <img src="images/bag.png" alt="Shopping Bag" class="nav-bag-icon" style="width: 30px; height: auto;">
+            </a>
+        </div> 
     </header>
 
     <main class="content-wrapper">
         <div class="product-card">
             
             <div class="product-image-col">
-                <img src="productTA.png" alt="The Action Album" class="main-product-img">
+                <img src="images/productTA.png" alt="The Action Album" class="main-product-img">
             </div>
 
             <div class="product-details-col">
@@ -39,9 +37,9 @@
                 <div class="selection-group">
                     <label>Version</label>
                     <div class="version-buttons">
-                        <button class="ver-btn active">PLAY</button>
-                        <button class="ver-btn">LOADING</button>
-                        <button class="ver-btn">PAUSE</button>
+                        <a href="product_play.html" class="ver-btn active">PLAY</a>
+                        <button type="button" class="ver-btn">LOADING</button>
+                        <button type="button" class="ver-btn">PAUSE</button>
                     </div>
                 </div>
 
@@ -57,15 +55,13 @@
                 <button class="add-to-cart-btn">ADD TO CART</button>
             </div>
         </div>
-
-        <div class="home-icon-container">
-            <a href="Index.html">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z"/>
-                </svg>
-            </a>
-        </div>
     </main>
+
+    <div class="home-icon">
+        <a href="Index.html">
+            <img src="images/bndsublogo.png" alt="home button">
+        </a>
+    </div>
 
     <footer class="main-footer">
         <div class="footer-left">
@@ -74,7 +70,7 @@
 
         <div class="footer-right">
             <h3>KOZ ENTERTAINMENT</h3>
-            <p>A. 42, Hangang daero, Yongsan gu, Seoul, 04389 Korea</p>
+            <p>A. 42, Hangang daero, Yongsan gu, Seoul, 04389</p>
             <p>ALL RIGHTS RESERVED. &copy; 2025 KOZ ENTERTAINMENT</p>
             <a href="#" class="privacy-link">PRIVACY POLICY</a>
         </div>

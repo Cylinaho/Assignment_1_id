@@ -1,16 +1,17 @@
-/* --- Global Styles --- */
+/* --- General Reset --- */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Clean font like the image */
-    background-color: #f0f4f8;
-    /* Optional: If you have the brick background image, uncomment line below */
-    /* background-image: url('images/brick-pattern.png'); */
+    font-family: 'Fredoka', sans-serif;
+    /* Make sure this background image exists, or the page will be plain white */
+    background: #f0f8ff url("images/background.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    color: #000;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,133 +22,161 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    width: 100%;
+    border-bottom: 3px solid #4d8fe0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
-    font-size: 24px;
+    font-size: 2rem;
     text-decoration: none;
-    color: black;
+    color: #0075b4;
+    font-weight: bold;
     width: 30px;
 }
 
-.logo-container img {
-    height: 40px; /* Adjust based on your logo size */
+.logo-container {
+    text-align: center;
+    flex-grow: 1;
 }
 
-.cart-icon {
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- BAG ICON --- */
+.cart-container {
     width: 30px;
     display: flex;
-    justify-content: flex-end;
-}
-
-/* --- Main Content Area --- */
-.content-wrapper {
-    flex: 1; /* Pushes footer down */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    /* Create the blue texture background effect here if no image */
-    background: repeating-linear-gradient(
-        45deg,
-        #eaf6ff,
-        #eaf6ff 10px,
-        #dcedfa 10px,
-        #dcedfa 20px
-    );
+    align-items: center;
 }
 
-/* --- Product Card --- */
+/* This forces the bag to stay small */
+.nav-bag-icon {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nav-bag-icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- PRODUCT CARD (The White Box) --- */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
 .product-card {
-    background: white;
+    background-color: #ffffff;
+    /* Forced White Background */
+    border: 3px solid #6cb4ee;
+    /* The Blue Border */
     border-radius: 20px;
-    border: 2px solid #6cb4ee; /* Light blue border */
     padding: 30px;
     display: flex;
     gap: 30px;
     max-width: 900px;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Shadow to separate from bg */
     align-items: center;
+    position: relative;
+    /* Ensures it sits on top */
+    z-index: 10;
 }
 
-/* Left Column */
+/* Image Section */
 .product-image-col {
     flex: 1;
 }
 
 .main-product-img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     display: block;
 }
 
-/* Right Column */
+/* Details Section */
 .product-details-col {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    text-align: left;
 }
 
 .product-title {
-    font-size: 24px;
-    font-weight: 900;
-    color: black;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .product-price {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
     margin-bottom: 10px;
 }
 
-/* Labels */
-label {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #000;
-}
-
-/* Version Buttons */
+/* --- BUTTONS --- */
 .version-buttons {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
 }
 
+/* Shared style for Link(Play) and Buttons(Loading/Pause) */
 .ver-btn {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
     border-radius: 8px;
     background: white;
+    font-family: 'Fredoka', sans-serif;
     font-weight: 700;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
     cursor: pointer;
-    font-size: 12px;
+    transition: all 0.3s ease;
 }
 
-/* Active state for the "PLAY" button (Blue) */
+.ver-btn:hover {
+    border-color: #6cb4ee;
+    color: #6cb4ee;
+}
+
+/* Active State (Blue) */
 .ver-btn.active {
     background-color: #6cb4ee;
     color: white;
     border-color: #6cb4ee;
 }
 
-/* Quantity Selector */
+.ver-btn.active:hover {
+    background-color: #4d8fe0;
+    border-color: #4d8fe0;
+}
+
+/* --- QUANTITY & CART --- */
 .quantity-selector {
     display: inline-flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 5px 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    padding: 5px 15px;
     background: white;
     width: fit-content;
 }
@@ -155,85 +184,103 @@ label {
 .qty-btn {
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
+    color: #6cb4ee;
+    font-weight: bold;
     padding: 0 10px;
 }
 
 .qty-num {
-    font-weight: 700;
-    padding: 0 10px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 15px;
 }
 
-/* Add to Cart Button */
 .add-to-cart-btn {
-    margin-top: 10px;
-    background-color: #6cb4ee; /* Match the blue from image */
+    margin-top: 15px;
+    background-color: #6cb4ee;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 15px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     cursor: pointer;
     width: 100%;
-    transition: background 0.2s;
 }
 
 .add-to-cart-btn:hover {
-    background-color: #5aa0d6;
+    background-color: #4d8fe0;
 }
 
-/* --- Home Icon --- */
-.home-icon-container {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+/* --- FOOTER --- */
+.home-icon {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
-/* --- Footer --- */
+.home-icon img {
+    width: 150px;
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-icon img:hover {
+    transform: scale(1.1);
+}
+
 .main-footer {
-    background-color: #AECDE8; /* Light blue footer background */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 40px;
+    padding: 40px 10%;
+    background-color: #96c9f3;
+    margin-top: auto;
 }
 
-.footer-left img {
-    height: 60px; /* Adjust logo size */
-    mix-blend-mode: multiply; /* Helps logo blend if not transparent */
+.footer-left .footer-brand-logo {
+    width: 400px;
 }
 
 .footer-right {
-    text-align: right;
-    font-size: 10px;
-    color: black;
-    line-height: 1.5;
+    text-align: left;
+    font-size: 24px;
+    color: #000;
 }
 
 .footer-right h3 {
-    font-size: 12px;
-    font-weight: 900;
-    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
 }
 
 .privacy-link {
     text-decoration: underline;
-    color: black;
-    font-weight: 700;
+    color: #001285;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-/* --- Responsive/Mobile --- */
+/* Mobile Fixes */
 @media (max-width: 768px) {
     .product-card {
         flex-direction: column;
     }
+
     .main-footer {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
+
+    .footer-left .footer-brand-logo {
+        width: 250px;
+    }
+
     .footer-right {
         text-align: center;
     }
