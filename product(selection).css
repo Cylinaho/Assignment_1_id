@@ -7,12 +7,12 @@
 
 body {
     font-family: 'Fredoka', sans-serif;
+    /* Soft Blue Grid Background */
     background-color: #f0f8ff;
-    /* CSS Grid Pattern (Blue tiles) */
     background-image: 
         linear-gradient(#cce4f7 2px, transparent 2px),
         linear-gradient(90deg, #cce4f7 2px, transparent 2px);
-    background-size: 40px 40px;
+    background-size: 50px 50px;
     color: #000;
     display: flex;
     flex-direction: column;
@@ -26,19 +26,19 @@ a { text-decoration: none; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 20px;
     background-color: #ffffff;
     width: 100%;
-    border-bottom: 3px solid #6cb4ee;
+    border-bottom: 1px solid #eee; /* Lighter border per image */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .back-button {
-    font-size: 2rem;
     color: #000;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .logo-container {
@@ -47,118 +47,123 @@ a { text-decoration: none; }
 }
 
 .header-logo {
-    height: 40px;
+    height: 35px; /* Adjusted size */
     width: auto;
     display: block;
     margin: 0 auto;
 }
 
 .cart-container {
-    width: 40px;
+    width: 24px;
     display: flex;
     justify-content: flex-end;
 }
 
 .nav-bag-icon {
-    width: 30px; 
+    width: 24px; 
     height: auto;
-    display: block;
-    transition: transform 0.2s;
+    /* If your icon is black, this filter turns it blue-ish to match the theme */
+    /* Remove this line if your icon image is already blue */
+    filter: invert(61%) sepia(66%) saturate(1003%) hue-rotate(186deg) brightness(98%) contrast(92%);
 }
-.nav-bag-icon:hover { transform: scale(1.1); }
 
-
-/* --- 3. PRODUCT CARD (The White Box) --- */
+/* --- 3. PRODUCT CARD --- */
 .content-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+    align-items: center; /* Vertically center */
+    padding: 20px;
 }
 
 .product-card {
     background-color: #ffffff;
-    border: 3px solid #6cb4ee;
-    border-radius: 20px;
-    padding: 30px;
+    /* The blue border outline */
+    border: 2px solid #6cb4ee;
+    border-radius: 15px;
+    padding: 20px;
     display: flex;
-    gap: 30px;
-    max-width: 900px;
+    flex-direction: row; /* Side by side layout */
+    gap: 20px;
+    max-width: 600px; /* Limits width so it looks like the mobile screenshot */
     width: 100%;
-    /* Drop shadow to make container visible */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    align-items: center;
+    box-shadow: 0 4px 15px rgba(108, 180, 238, 0.2);
+    align-items: flex-start;
 }
 
-/* Left Image */
+/* Left Image Column */
 .product-image-col {
-    flex: 1;
+    flex: 1; /* Takes up about 40-50% space */
     display: flex;
     justify-content: center;
 }
 
 .main-product-img {
     width: 100%;
-    max-width: 350px;
-    border-radius: 8px;
-    display: block;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Right Details */
+/* Right Details Column */
 .product-details-col {
-    flex: 1;
+    flex: 1.2; /* Takes slightly more space for text */
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     text-align: left;
 }
 
 .product-title {
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 18px; /* Adjusted for mobile scale */
+    font-weight: 700;
+    line-height: 1.2;
     color: #000;
 }
 
 .product-price {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     color: #000;
 }
 
-/* --- BUTTONS --- */
+/* --- CONTROLS --- */
 .selection-group label {
     display: block;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 .version-buttons {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-/* Base Button Style */
+/* Button Styles */
 .ver-btn {
-    padding: 10px 20px;
+    padding: 6px 12px;
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: 8px; /* Rounded corners */
     background: white;
     font-family: 'Fredoka', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    color: #555;
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
     cursor: pointer;
     text-transform: uppercase;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
 }
 
-/* Active State (Blue Background) */
+/* The Blue 'Active' Button */
 .ver-btn.active {
     background-color: #6cb4ee;
     color: white;
     border-color: #6cb4ee;
+    box-shadow: 0 2px 5px rgba(108, 180, 238, 0.4);
 }
 
 /* --- QUANTITY --- */
@@ -167,71 +172,73 @@ a { text-decoration: none; }
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 20px;
-    padding: 5px 15px;
+    padding: 4px 10px;
     background: white;
-    width: fit-content;
 }
 
 .qty-btn {
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    color: #6cb4ee;
+    color: #000;
     font-weight: bold;
+    padding: 0 5px;
 }
 
 .qty-num {
-    font-weight: bold;
-    font-size: 16px;
-    padding: 0 15px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 10px;
 }
 
 /* --- ADD TO CART --- */
 .add-to-cart-btn {
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: #6cb4ee;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     width: 100%;
     font-family: 'Fredoka', sans-serif;
+    box-shadow: 0 4px 6px rgba(108, 180, 238, 0.3);
 }
 
 .add-to-cart-btn:hover {
     background-color: #5aa1db;
 }
 
-/* --- FOOTER ELEMENTS --- */
+/* --- FOOTER & HOME --- */
 .home-icon {
     text-align: center;
-    margin: 20px 0 40px 0;
+    margin-bottom: 30px;
 }
 
 .home-icon img {
-    width: 60px;
-    filter: brightness(0); /* Force black icon */
+    width: 50px;
+    /* Forces the icon to be a black silhouette */
+    filter: brightness(0); 
     cursor: pointer;
     transition: transform 0.2s;
 }
 .home-icon img:hover { transform: scale(1.1); }
 
 .main-footer {
-    background-color: #AECDE8;
+    background-color: #AECDE8; /* Matches the light blue footer */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 40px;
-    margin-top: auto;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer-left .footer-brand-logo {
-    width: 200px;
-    mix-blend-mode: multiply;
+    width: 100px; /* Smaller logo size */
+    mix-blend-mode: multiply; /* Blends logo into background */
 }
 
 .footer-right {
@@ -240,32 +247,39 @@ a { text-decoration: none; }
 }
 
 .footer-right h3 {
-    font-size: 14px;
-    font-weight: 900;
-    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 4px;
 }
 
 .footer-right p {
-    font-size: 11px;
+    font-size: 9px;
     line-height: 1.4;
+    opacity: 0.8;
 }
 
 .privacy-link {
     text-decoration: underline;
     color: #000;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 9px;
+    display: inline-block;
+    margin-top: 4px;
 }
 
-/* --- MOBILE --- */
-@media (max-width: 768px) {
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 450px) {
     .product-card {
-        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    .product-title {
+        font-size: 16px;
     }
     .main-footer {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
     }
     .footer-right {
         text-align: center;
