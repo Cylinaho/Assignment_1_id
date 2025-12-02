@@ -76,10 +76,11 @@ body {
 .members-title h1 {
     background: white;
     /* Removed blue border to match reference image style exactly, add it back if you prefer */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: inline-block;
-    padding: 15px 60px;
+    padding: 30px 150px;
     border-radius: 8px;
+    border-color: #3a93ff;
     font-family: 'Arial Black', sans-serif;
     font-size: 40px;
     letter-spacing: 2px;
@@ -87,41 +88,49 @@ body {
 
 /* MEMBERS CONTAINER */
 #members-container {
-    width: 70%; /* Made slightly wider to fit 3 columns */
+    width: 80%;
+    /* Made slightly wider to fit 3 columns */
     margin: 0 auto;
 }
 
 /* MEMBER CARD (The New 3-Column Layout) */
 .member-card {
-    display: flex; /* Makes the card flexible */
+    display: flex;
+    /* Makes the card flexible */
     flex-direction: row;
     background: white;
-    border: 3px solid #b3d8ff; /* Light blue border */
+    border: 3px solid #b3d8ff;
+    /* Light blue border */
     padding: 25px;
     border-radius: 20px;
     margin-bottom: 35px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    align-items: flex-start; /* Aligns items to the top */
-    gap: 20px; /* Space between columns */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    gap: 20px;
+    /* Space between columns */
 }
 
 /* COLUMN 1: IMAGE */
 .member-photo {
-    width: 180px; /* Fixed width for photo */
+    width: 180px;
+    /* Fixed width for photo */
     height: auto;
     border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* COLUMN 2: INFO (Middle) */
 .member-info-middle {
-    flex: 1.2; /* Takes up slightly more space */
+    flex: 1.2;
+    /* Takes up slightly more space */
     text-align: left;
 }
 
 .member-info-middle h2 {
     font-family: 'Arial Black', sans-serif;
-    color: #d32b2b; /* Red color for name */
+    color: #d32b2b;
+    /* Red color for name */
     margin: 0 0 15px 0;
     font-size: 32px;
     text-transform: uppercase;
@@ -142,8 +151,10 @@ body {
 
 /* COLUMN 3: FACTS (Right) */
 .member-facts-right {
-    flex: 1; /* Takes up remaining space */
-    border-left: 1px solid #eee; /* Optional divider line */
+    flex: 1;
+    /* Takes up remaining space */
+    border-left: 1px solid #eee;
+    /* Optional divider line */
     padding-left: 20px;
 }
 
@@ -164,7 +175,8 @@ body {
     font-size: 13px;
     line-height: 1.4;
     margin-bottom: 5px;
-    list-style-type: disc; /* Bullet points for facts */
+    list-style-type: disc;
+    /* Bullet points for facts */
     color: #444;
 }
 
@@ -179,7 +191,7 @@ body {
         align-items: center;
         text-align: center;
     }
-    
+
     .member-info-middle {
         text-align: center;
         width: 100%;
@@ -192,7 +204,8 @@ body {
         padding-left: 0;
         padding-top: 20px;
         width: 100%;
-        text-align: left; /* Keep lists readable on mobile */
+        text-align: left;
+        /* Keep lists readable on mobile */
     }
 }
 
@@ -251,8 +264,23 @@ body {
 }
 
 @media (max-width: 768px) {
-    .navbar ul { flex-direction: column; }
-    .navbar a { width: 100%; padding: 15px; }
-    .main-footer { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
-    .footer-right { text-align: center; }
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
 }
