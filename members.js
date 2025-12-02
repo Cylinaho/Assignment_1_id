@@ -2,7 +2,7 @@
 const members = [
     {
         name: "SUNGHO",
-        image: "images/sungho.jpg",
+        image: "images/members/sungho.jpg",
         facts: [
             "Birth Name: Park Sungho (박선호)",
             "Birthday: Sept 4, 2003",
@@ -14,7 +14,7 @@ const members = [
     },
     {
         name: "RIWOO",
-        image: "images/riwoo.jpg",
+        image: "images/members/riwoo.jpg",
         facts: [
             "Birth Name: Lee Sanghwan (이상환)",
             "Birthday: Oct 22, 2003",
@@ -25,7 +25,7 @@ const members = [
     },
     {
         name: "JAEHYUN",
-        image: "images/jaehyun.jpg",
+        image: "images/members/jaehyun.jpg",
         facts: [
             "Birth Name: Myung Jaehyun (명재현)",
             "Birthday: Dec 4, 2004",
@@ -36,7 +36,7 @@ const members = [
     },
     {
         name: "TAESAN",
-        image: "images/taesan.jpg",
+        image: "images/members/taesan.jpg",
         facts: [
             "Birth Name: Kim TaeSan (김태산)",
             "Birthday: Aug 10, 2004",
@@ -47,7 +47,7 @@ const members = [
     },
     {
         name: "LEEHAN",
-        image: "images/leehan.jpg",
+        image: "images/members/leehan.jpg",
         facts: [
             "Birth Name: Kim Donghyun (김동현)",
             "Birthday: Oct 20, 2004",
@@ -58,7 +58,7 @@ const members = [
     },
     {
         name: "WOONHAK",
-        image: "images/woonha.jpg",
+        image: "images/members/woonhak.jpg",
         facts: [
             "Birth Name: Park Woonhak (박운학)",
             "Birthday: Nov 29, 2006",
