@@ -76,7 +76,7 @@ body {
 .members-title h1 {
     background: white;
     /* FIXED: Added solid border style and width so the color shows up */
-    border: 5px solid #3a93ff;
+    border: 2px solid #5DADE2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: inline-block;
     padding: 30px 150px;
@@ -99,7 +99,7 @@ body {
     display: flex;
     flex-direction: row;
     background: white;
-    border: 3px solid #b3d8ff;
+    border: 3px solid #5DADE2;
     padding: 30px;
     /* Increased padding slightly */
     border-radius: 20px;
