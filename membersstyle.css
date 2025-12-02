@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 
 /* GLOBAL RESET */
 * {
@@ -14,14 +13,7 @@ h1 {
     line-height: 1.2;
 }
 
-/* TOP LOGO */
-.smile {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
+/* HERO LOGO */
 .hero-logo {
     width: 100%;
     height: auto;
@@ -32,17 +24,16 @@ h1 {
 body {
     background-image: url("images/background.jpg");
     background-size: cover;
-    background-repeat: no-repeat; /* Changed to no-repeat so cover works better */
+    background-repeat: no-repeat;
     background-position: center;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION BAR (Unchanged) */
 .navbar {
     background: #ffffff;
-    /* position: sticky; top: 0; z-index: 100; */
 }
 
 .navbar ul {
@@ -60,16 +51,15 @@ body {
 .navbar a {
     text-decoration: none;
     color: #3a93ff;
-    /* Removed fixed width: 100px because padding is larger than width */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 60px; /* Reduced side padding so buttons fit on screen */
+    padding: 20px 60px;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    transition: background 0.3s; /* Smooth hover effect */
+    transition: background 0.3s;
 }
 
 .navbar a:hover {
@@ -80,81 +70,129 @@ body {
 .members-title {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .members-title h1 {
     background: white;
-    border: 3px solid #5DADE2;
+    /* Removed blue border to match reference image style exactly, add it back if you prefer */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     display: inline-block;
-    padding: 12px 40px;
-    border-radius: 12px;
+    padding: 15px 60px;
+    border-radius: 8px;
     font-family: 'Arial Black', sans-serif;
-    font-size: 35px;
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
 /* MEMBERS CONTAINER */
 #members-container {
-    width: 60%;
-    margin: 30px auto;
+    width: 70%; /* Made slightly wider to fit 3 columns */
+    margin: 0 auto;
 }
 
-/* MEMBER CARD */
+/* MEMBER CARD (The New 3-Column Layout) */
 .member-card {
-    display: flex;
-    align-items: center;
+    display: flex; /* Makes the card flexible */
+    flex-direction: row;
     background: white;
-    border: 3px solid #5DADE2;
-    padding: 20px;
-    border-radius: 12px;
+    border: 3px solid #b3d8ff; /* Light blue border */
+    padding: 25px;
+    border-radius: 20px;
     margin-bottom: 35px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Space between columns */
 }
 
-/* MEMBER IMAGE */
+/* COLUMN 1: IMAGE */
 .member-photo {
-    width: 190px;
+    width: 180px; /* Fixed width for photo */
     height: auto;
-    border-radius: 12px;
-    margin-right: 25px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* MEMBER INFO */
-.member-info h2 {
+/* COLUMN 2: INFO (Middle) */
+.member-info-middle {
+    flex: 1.2; /* Takes up slightly more space */
+    text-align: left;
+}
+
+.member-info-middle h2 {
     font-family: 'Arial Black', sans-serif;
-    color: #d32b2b;
-    margin: 0 0 8px 0;
-    font-size: 30px;
+    color: #d32b2b; /* Red color for name */
+    margin: 0 0 15px 0;
+    font-size: 32px;
+    text-transform: uppercase;
 }
 
-.member-info ul {
-    padding-left: 20px;
+.member-info-middle ul {
+    padding: 0;
     margin: 0;
-    font-size: 18px;
-    line-height: 1.6;
+    list-style: none;
 }
 
-.member-info li {
-    list-style-type: disc;
+.member-info-middle li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    color: #333;
 }
 
-/* RESPONSIVE MEMBERS */
-@media (max-width: 768px) {
+/* COLUMN 3: FACTS (Right) */
+.member-facts-right {
+    flex: 1; /* Takes up remaining space */
+    border-left: 1px solid #eee; /* Optional divider line */
+    padding-left: 20px;
+}
+
+.facts-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #000;
+}
+
+.member-facts-right ul {
+    padding-left: 15px;
+    margin: 0;
+}
+
+.member-facts-right li {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    list-style-type: disc; /* Bullet points for facts */
+    color: #444;
+}
+
+/* RESPONSIVE DESIGN (Mobile) */
+@media (max-width: 900px) {
     #members-container {
         width: 90%;
     }
 
     .member-card {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
-
-    .member-photo {
-        margin: 0 0 20px 0;
+    
+    .member-info-middle {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    .member-info ul {
+    .member-facts-right {
+        border-left: none;
+        border-top: 1px solid #eee;
         padding-left: 0;
-        list-style: none;
+        padding-top: 20px;
+        width: 100%;
+        text-align: left; /* Keep lists readable on mobile */
     }
 }
 
@@ -162,19 +200,20 @@ body {
 .home-icon {
     text-align: center;
     margin-bottom: 60px;
+    margin-top: 40px;
 }
 
 .home-icon img {
-    width: 150px;
+    width: 100px;
     filter: grayscale(100%) brightness(0);
     cursor: pointer;
 }
 
-/* FOOTER */
+/* FOOTER (Unchanged) */
 .main-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Fixed syntax error here */
+    align-items: center;
     padding: 20px 10%;
     background-color: #96c9f3;
     margin-top: 50px;
@@ -182,14 +221,14 @@ body {
 }
 
 .footer-left .footer-brand-logo {
-    width: 250px; /* Reduced from 400px to fit better */
+    width: 250px;
     height: auto;
     display: block;
 }
 
 .footer-right {
     text-align: left;
-    font-size: 18px; /* Adjusted size for readability */
+    font-size: 18px;
     color: #000;
 }
 
@@ -211,27 +250,9 @@ body {
     font-weight: bold;
 }
 
-/* RESPONSIVE FOOTER */
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-    }
-    
-    .navbar a {
-        width: 100%; /* Full width on mobile */
-        padding: 15px;
-    }
-
-    .main-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .footer-right {
-        text-align: center;
-    }
-    
-    /* Removed unused .row and .text-box classes unless you add them to HTML */
+    .navbar ul { flex-direction: column; }
+    .navbar a { width: 100%; padding: 15px; }
+    .main-footer { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .footer-right { text-align: center; }
 }
