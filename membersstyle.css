@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* GLOBAL RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* HEADINGS */
+h1 {
+    color: #000;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* TOP LOGO */
+.smile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.hero-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* BACKGROUND */
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; /* Changed to no-repeat so cover works better */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background: #ffffff;
+    /* position: sticky; top: 0; z-index: 100; */
+}
+
+.navbar ul {
+    list-style: none;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3a93ff;
+    /* Removed fixed width: 100px because padding is larger than width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px; /* Reduced side padding so buttons fit on screen */
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+.navbar a:hover {
+    background: #b3d8ff;
+}
+
+/* MEMBERS TITLE */
+.members-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.members-title h1 {
+    background: white;
+    border: 3px solid #5DADE2;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 12px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 35px;
+}
+
+/* MEMBERS CONTAINER */
+#members-container {
+    width: 60%;
+    margin: 30px auto;
+}
+
+/* MEMBER CARD */
+.member-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 3px solid #5DADE2;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* MEMBER IMAGE */
+.member-photo {
+    width: 190px;
+    height: auto;
+    border-radius: 12px;
+    margin-right: 25px;
+}
+
+/* MEMBER INFO */
+.member-info h2 {
+    font-family: 'Arial Black', sans-serif;
+    color: #d32b2b;
+    margin: 0 0 8px 0;
+    font-size: 30px;
+}
+
+.member-info ul {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.member-info li {
+    list-style-type: disc;
+}
+
+/* RESPONSIVE MEMBERS */
+@media (max-width: 768px) {
+    #members-container {
+        width: 90%;
+    }
+
+    .member-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member-photo {
+        margin: 0 0 20px 0;
+    }
+
+    .member-info ul {
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+/* HOME ICON */
+.home-icon {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.home-icon img {
+    width: 150px;
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+}
+
+/* FOOTER */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Fixed syntax error here */
+    padding: 20px 10%;
+    background-color: #96c9f3;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.footer-left .footer-brand-logo {
+    width: 250px; /* Reduced from 400px to fit better */
+    height: auto;
+    display: block;
+}
+
+.footer-right {
+    text-align: left;
+    font-size: 18px; /* Adjusted size for readability */
+    color: #000;
+}
+
+.footer-right h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.footer-right p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.privacy-link {
+    text-decoration: underline;
+    color: #001285;
+    font-weight: bold;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    
+    .navbar a {
+        width: 100%; /* Full width on mobile */
+        padding: 15px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-right {
+        text-align: center;
+    }
+    
+    /* Removed unused .row and .text-box classes unless you add them to HTML */
+}
