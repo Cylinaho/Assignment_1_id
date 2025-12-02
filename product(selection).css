@@ -1,0 +1,240 @@
+/* --- Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Clean font like the image */
+    background-color: #f0f4f8;
+    /* Optional: If you have the brick background image, uncomment line below */
+    /* background-image: url('images/brick-pattern.png'); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Header --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-button {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    width: 30px;
+}
+
+.logo-container img {
+    height: 40px; /* Adjust based on your logo size */
+}
+
+.cart-icon {
+    width: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* --- Main Content Area --- */
+.content-wrapper {
+    flex: 1; /* Pushes footer down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    /* Create the blue texture background effect here if no image */
+    background: repeating-linear-gradient(
+        45deg,
+        #eaf6ff,
+        #eaf6ff 10px,
+        #dcedfa 10px,
+        #dcedfa 20px
+    );
+}
+
+/* --- Product Card --- */
+.product-card {
+    background: white;
+    border-radius: 20px;
+    border: 2px solid #6cb4ee; /* Light blue border */
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+/* Left Column */
+.product-image-col {
+    flex: 1;
+}
+
+.main-product-img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Right Column */
+.product-details-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+/* Version Buttons */
+.version-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.ver-btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Active state for the "PLAY" button (Blue) */
+.ver-btn.active {
+    background-color: #6cb4ee;
+    color: white;
+    border-color: #6cb4ee;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: white;
+    width: fit-content;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.qty-num {
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    margin-top: 10px;
+    background-color: #6cb4ee; /* Match the blue from image */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #5aa0d6;
+}
+
+/* --- Home Icon --- */
+.home-icon-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #AECDE8; /* Light blue footer background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.footer-left img {
+    height: 60px; /* Adjust logo size */
+    mix-blend-mode: multiply; /* Helps logo blend if not transparent */
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 10px;
+    color: black;
+    line-height: 1.5;
+}
+
+.footer-right h3 {
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.privacy-link {
+    text-decoration: underline;
+    color: black;
+    font-weight: 700;
+}
+
+/* --- Responsive/Mobile --- */
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+    }
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-right {
+        text-align: center;
+    }
+}
