@@ -32,6 +32,11 @@
             <span class="dot cat2"></span> CAT 2
             <span class="dot cat3"></span> CAT 3
         </div>
+
+        <div class="admission-info">
+            <p><strong>IMPORTANT:</strong> For standing, no admission for children aged below 12 years old and/or height
+                below 1.2 metres.</p>
+        </div>
     </div>
 
     <div class="booking-wrapper">
@@ -42,17 +47,23 @@
 
                 <div class="form-group">
                     <label>Ticket Type</label>
-                    <input type="text" placeholder="" required>
+                    <select id="ticketType" required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="298">VIP - $298</option>
+                        <option value="258">CAT 1 - $258</option>
+                        <option value="218">CAT 2 - $218</option>
+                        <option value="178">CAT 3 - $178</option>
+                    </select>
                 </div>
 
-                <div class="input-group">
+                <div class="form-group">
                     <label>Price</label>
-                    <input type="text" class="form-control" value="$268.00" readonly>
+                    <input type="text" id="ticketPrice" class="form-control" placeholder="$0.00" readonly>
                 </div>
-                
+
                 <div class="form-group">
                     <label>Qty</label>
-                    <input type="number" min="1" max="10" required>
+                    <input type="number" min="1" max="10" value="1" required>
                 </div>
 
                 <button type="submit" class="submit-btn">BEST AVAILABLE</button>
@@ -61,24 +72,41 @@
         </div>
     </div>
 
-    <div class="home-icon">
-        <a href="Index.html">
-            <img src="images/bndsublogo.png" alt="home button">
-        </a>
+    <script>
+        // 1. Get the elements
+        const ticketSelect = document.getElementById('ticketType');
+        const priceInput = document.getElementById('ticketPrice');
+
+        // 2. Add an event listener for when the user changes the dropdown
+        ticketSelect.addEventListener('change', function () {
+            // Get the value (price) from the selected option
+            const selectedPrice = this.value;
+
+            // Update the price input box
+            priceInput.value = '$' + selectedPrice + '.00';
+        });
+    </script>
+
+</body>
+
+<div class="home-icon">
+    <a href="Index.html">
+        <img src="images/bndsublogo.png" alt="home button">
+    </a>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-left">
+        <img src="images/kozlogo.png" alt="KOZ Logo" class="footer-brand-logo">
     </div>
 
-    <footer class="main-footer">
-        <div class="footer-left">
-            <img src="images/kozlogo.png" alt="KOZ Logo" class="footer-brand-logo">
-        </div>
-
-        <div class="footer-right">
-            <h3>KOZ ENTERTAINMENT</h3>
-            <p>A. 42, Hangang daero, Yongsan gu, Seoul, 04389</p>
-            <p>ALL RIGHTS RESERVED. &copy; 2025 KOZ ENTERTAINMENT</p>
-            <a href="#" class="privacy-link">PRIVACY POLICY</a>
-        </div>
-    </footer>
+    <div class="footer-right">
+        <h3>KOZ ENTERTAINMENT</h3>
+        <p>A. 42, Hangang daero, Yongsan gu, Seoul, 04389</p>
+        <p>ALL RIGHTS RESERVED. &copy; 2025 KOZ ENTERTAINMENT</p>
+        <a href="#" class="privacy-link">PRIVACY POLICY</a>
+    </div>
+</footer>
 
 </body>
 
