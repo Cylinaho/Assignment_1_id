@@ -9,7 +9,7 @@ body {
     font-family: 'Fredoka', sans-serif;
     /* Soft Blue Grid Background */
     background-color: #f0f8ff;
-    background-image: 
+    background-image:
         linear-gradient(#cce4f7 2px, transparent 2px),
         linear-gradient(90deg, #cce4f7 2px, transparent 2px);
     background-size: 50px 50px;
@@ -19,24 +19,26 @@ body {
     min-height: 100vh;
 }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+}
 
 /* --- 2. HEADER --- */
 .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px 40px;
     background-color: #ffffff;
     width: 100%;
-    border-bottom: 1px solid #eee; /* Lighter border per image */
+    border-bottom: 3px solid #4d8fe0; /* Line at the bottom to separate it */
     position: sticky;
-    top: 0;
-    z-index: 1000;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .back-button {
-    color: #000;
+    color: #0075b4;
     display: flex;
     align-items: center;
 }
@@ -47,20 +49,21 @@ a { text-decoration: none; }
 }
 
 .header-logo {
-    height: 35px; /* Adjusted size */
+    height: 100px;
+    /* Adjusted size */
     width: auto;
     display: block;
     margin: 0 auto;
 }
 
 .cart-container {
-    width: 24px;
+    width: 50px;
     display: flex;
     justify-content: flex-end;
 }
 
 .nav-bag-icon {
-    width: 24px; 
+    width: 50px;
     height: auto;
     /* If your icon is black, this filter turns it blue-ish to match the theme */
     /* Remove this line if your icon image is already blue */
@@ -72,7 +75,8 @@ a { text-decoration: none; }
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertically center */
+    align-items: center;
+    /* Vertically center */
     padding: 20px;
 }
 
@@ -83,9 +87,11 @@ a { text-decoration: none; }
     border-radius: 15px;
     padding: 20px;
     display: flex;
-    flex-direction: row; /* Side by side layout */
+    flex-direction: row;
+    /* Side by side layout */
     gap: 20px;
-    max-width: 600px; /* Limits width so it looks like the mobile screenshot */
+    max-width: 800px;
+    /* Limits width so it looks like the mobile screenshot */
     width: 100%;
     box-shadow: 0 4px 15px rgba(108, 180, 238, 0.2);
     align-items: flex-start;
@@ -93,7 +99,8 @@ a { text-decoration: none; }
 
 /* Left Image Column */
 .product-image-col {
-    flex: 1; /* Takes up about 40-50% space */
+    flex: 1;
+    /* Takes up about 40-50% space */
     display: flex;
     justify-content: center;
 }
@@ -103,12 +110,13 @@ a { text-decoration: none; }
     height: auto;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Right Details Column */
 .product-details-col {
-    flex: 1.2; /* Takes slightly more space for text */
+    flex: 1.2;
+    /* Takes slightly more space for text */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -116,14 +124,15 @@ a { text-decoration: none; }
 }
 
 .product-title {
-    font-size: 18px; /* Adjusted for mobile scale */
+    font-size: 24px;
+    /* Adjusted for mobile scale */
     font-weight: 700;
     line-height: 1.2;
     color: #000;
 }
 
 .product-price {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #000;
 }
@@ -147,7 +156,8 @@ a { text-decoration: none; }
 .ver-btn {
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
+    /* Rounded corners */
     background: white;
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
@@ -264,7 +274,7 @@ a { text-decoration: none; }
 .footer-right p {
     margin: 5px 0;
     line-height: 1.4;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 .privacy-link {
