@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    /* Soft Blue Grid Background */
+    background-color: #f0f8ff;
+    background: #f0f8ff url("images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- 2. HEADER --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    
+    /* Full Width "Covered" Styles */
+    background-color: #ffffff;
+    width: 100%; /* Covers the whole top */
+    margin: 0; 
+    border-bottom: 3px solid #4d8fe0; /* Line at the bottom to separate it */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    color: #0075b4;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* HOME ICON */
+.home-icon {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.home-icon img {
+    width: 125px;
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #96c9f3;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.footer-left .footer-brand-logo {
+    width: 250px;
+    display: block;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 20px;
+    color: #000;
+}
+
+.footer-right h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.footer-right p {
+    margin: 5px 0;
+    line-height: 1.4;
+    font-size: 15px; 
+}
+
+.privacy-link {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-left .footer-brand-logo {
+        width: 250px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
