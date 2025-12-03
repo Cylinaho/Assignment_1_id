@@ -9,12 +9,14 @@ body {
     /* Background Image */
     background: #f0f8ff url("images/background.jpg");
     background-size: cover;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     color: #000;
 }
 
 /* HEADINGS */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Arial Black', sans-serif;
     line-height: 1.2;
 }
@@ -30,12 +32,12 @@ h1, h2, h3 {
     background-color: #fff;
     border: 3px solid #5DADE2;
     /* Reduced padding slightly to prevent it from breaking on small screens */
-    padding: 30px 150px; 
+    padding: 30px 150px;
     border-radius: 20px;
     font-size: 1.8rem;
     text-transform: uppercase;
     margin: 0;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* --- UPDATED: Header Bar (Covered) --- */
@@ -44,13 +46,15 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    
+
     /* Full Width "Covered" Styles */
     background-color: #ffffff;
-    width: 100%; /* Covers the whole top */
-    margin: 0; 
-    border-bottom: 3px solid #4d8fe0; /* Line at the bottom to separate it */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    /* Covers the whole top */
+    margin: 0;
+    border-bottom: 3px solid #4d8fe0;
+    /* Line at the bottom to separate it */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
@@ -96,6 +100,153 @@ h1, h2, h3 {
     transform: scale(1.1);
 }
 
+/* === SEATING PLAN STYLES === */
+.seating-section {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Slight white background to make text pop */
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.section-title {
+    color: #5DADE2;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.map-container {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.seat-img {
+    width: 100%;
+    max-width: 600px;
+    /* Limits size so it doesn't get too huge */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Legend dots */
+.legend-box {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.vip {
+    background-color: #FFD700;
+}
+
+/* Gold */
+.cat1 {
+    background-color: #5DADE2;
+}
+
+/* Blue */
+.cat2 {
+    background-color: #90EE90;
+}
+
+/* Green */
+
+
+/* === BOOKING FORM STYLES === */
+.booking-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.booking-box {
+    background-color: white;
+    border: 3px solid #5DADE2;
+    /* The Blue Border */
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 450px;
+    /* Width of the form box */
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: #5DADE2;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+/* Styling inputs to look like lines (as per image) */
+.form-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaddff;
+    /* Light blue underline */
+    padding: 5px 0;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-bottom: 2px solid #5DADE2;
+    /* Darker blue when clicked */
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    width: 100%;
+    background-color: #63c5ff;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #4dabe0;
+}
+
 /* FOOTER */
 .main-footer {
     display: flex;
@@ -128,7 +279,7 @@ h1, h2, h3 {
 .footer-right p {
     margin: 5px 0;
     line-height: 1.4;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 .privacy-link {
