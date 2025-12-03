@@ -213,6 +213,8 @@ body {
     }
 }
 
+/* --- User Footer Integration --- */
+
 /* HOME ICON */
 .home-icon {
     text-align: center;
@@ -221,9 +223,14 @@ body {
 }
 
 .home-icon img {
-    width: 100px;
+    width: 125px;
     filter: grayscale(100%) brightness(0);
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-icon img:hover {
+    transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -231,21 +238,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 10px 10%;
     background-color: #96c9f3;
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: left;
 }
 
 .footer-left .footer-brand-logo {
     width: 250px;
-    height: auto;
     display: block;
 }
 
 .footer-right {
-    text-align: left;
-    font-size: 18px;
+    text-align: right;
+    font-size: 20px;
     color: #000;
 }
 
@@ -259,29 +265,27 @@ body {
 .footer-right p {
     margin: 5px 0;
     line-height: 1.4;
+    font-size: 15px; 
 }
 
 .privacy-link {
     text-decoration: underline;
-    color: #001285;
+    color: black;
     font-weight: bold;
+    font-size: 16px;
 }
 
+/* RESPONSIVE FOOTER */
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar a {
-        width: 100%;
-        padding: 15px;
-    }
-
     .main-footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 20px;
+    }
+
+    .footer-left .footer-brand-logo {
+        width: 250px;
     }
 
     .footer-right {
