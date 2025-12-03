@@ -275,87 +275,82 @@ h3 {
   transform: scale(1.05);
 }
 
+/* --- User Footer Integration --- */
+
 /* HOME ICON */
 .home-icon {
-  text-align: center;
-  margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
 }
 
 .home-icon img {
-  width: 150px;
-  filter: grayscale(100%) brightness(0);
-  cursor: pointer;
+    width: 125px;
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-icon img:hover {
+    transform: scale(1.1);
 }
 
 /* FOOTER */
 .main-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 10%;
-  background-color: #96c9f3;
-  margin-top: 50px;
-  text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #96c9f3;
+    margin-top: 10px;
+    text-align: left;
 }
 
 .footer-left .footer-brand-logo {
-  width: 400px;
-  display: block;
+    width: 250px;
+    display: block;
 }
 
 .footer-right {
-  text-align: left;
-  font-size: 24px;
-  color: #000;
+    text-align: right;
+    font-size: 20px;
+    color: #000;
 }
 
 .footer-right h3 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-family: 'Arial Black', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
 }
 
 .footer-right p {
-  margin: 5px 0;
-  line-height: 1.4;
+    margin: 5px 0;
+    line-height: 1.4;
+    font-size: 15px; 
 }
 
 .privacy-link {
-  text-decoration: underline;
-  color: #001285;
-  font-weight: bold;
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE FOOTER */
 @media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-  }
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
 
-  .flex-row,
-  .split-section {
-    flex-direction: column;
-  }
+    .footer-left .footer-brand-logo {
+        width: 250px;
+    }
 
-  .debut-card {
-    width: 100%;
-    /* Full width on mobile */
-    height: auto;
-  }
-
-  .album-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .main-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-right {
-    text-align: center;
-  }
+    .footer-right {
+        text-align: center;
+    }
 }
