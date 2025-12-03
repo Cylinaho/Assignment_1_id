@@ -25,13 +25,15 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    
+
     /* Full Width "Covered" Styles */
     background-color: #ffffff;
-    width: 100%; /* Covers the whole top */
-    margin: 0; 
-    border-bottom: 3px solid #4d8fe0; /* Line at the bottom to separate it */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    /* Covers the whole top */
+    margin: 0;
+    border-bottom: 3px solid #4d8fe0;
+    /* Line at the bottom to separate it */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
@@ -52,6 +54,149 @@ a {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* --- NEW CHECKOUT FORM STYLES --- */
+
+/* Wrapper to center the card on the page */
+.checkout-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* The White Card */
+.checkout-card {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* "PAYMENT:" Title */
+.main-title {
+    text-align: center;
+    color: #6cbef2;
+    /* Light Blue */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Product Section (Image + Details) */
+.product-summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Divider Line */
+.divider {
+    border: 0;
+    height: 2px;
+    background-color: #6cbef2;
+    margin: 20px 0;
+}
+
+/* Form Sections */
+.section-header {
+    color: #4da6f0;
+    /* Blue */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #b3d9ff;
+    /* Light blue border */
+    border-radius: 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #333;
+    /* Dark placeholder text like the image */
+    font-weight: 700;
+}
+
+input:focus {
+    border-color: #4da6f0;
+    background-color: #fafdff;
+}
+
+/* Row for Expiry and Security Code */
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.half-width {
+    width: 50%;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #6cbef2;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #4da6f0;
 }
 
 /* HOME ICON */
@@ -104,7 +249,7 @@ a {
 .footer-right p {
     margin: 5px 0;
     line-height: 1.4;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 .privacy-link {

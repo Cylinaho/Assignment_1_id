@@ -4,19 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOYNEXTDOOR - Cart</title>
-    <link href="cart.css" rel="stylesheet">
+    <title>BOYNEXTDOOR - Payment_shop</title>
+    <link href="payment(shop).css" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="top-nav">
-        <a href="product(selection).html" class="back-button">&lt;</a>
+        <a href="cart.html" class="back-button">&lt;</a>
         <div class="logo-container">
             <img src="images/bndlogowhite.png" alt="BOYNEXTDOOR Logo" class="header-logo">
         </div>
         <div class="spacer"></div>
     </header>
+
+    <div class="checkout-wrapper">
+        <div class="checkout-card">
+            
+            <h2 class="main-title">PAYMENT:</h2>
+
+            <div class="product-summary">
+                <div class="product-image">
+                    <img src="images/sales file/productTA.png" alt="BOYNEXTDOOR Album"> 
+                </div>
+                <div class="product-details">
+                    <h3>BOYNEXTDOOR -<br>The Action</h3>
+                    <div class="detail-row">
+                        <span class="label">Version</span>
+                        <span class="value">PLAY</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Quantity</span>
+                        <span class="value">- 1 -</span>
+                    </div>
+                    <div class="detail-row total">
+                        <span class="label">Order Total:</span>
+                        <span class="value">$28.50</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <form action="#" method="POST">
+                
+                <div class="form-section">
+                    <h3 class="section-header">Delivery</h3>
+                    <input type="text" placeholder="Name" required>
+                    <input type="tel" placeholder="Mobile Number" required>
+                    <input type="text" placeholder="Postal Code" required>
+                    <input type="text" placeholder="Address" required>
+                    <input type="text" placeholder="Unit Number/ House No.">
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-header">Payment</h3>
+                    <input type="text" placeholder="Card Number" required>
+                    
+                    <div class="input-row">
+                        <input type="text" placeholder="Expiration Date (MM / YY)" class="half-width" required>
+                        <input type="text" placeholder="Security Code" class="half-width" required>
+                    </div>
+                    
+                    <input type="text" placeholder="Name on card" required>
+                </div>
+
+                <button type="submit" class="checkout-btn">CHECKOUT</button>
+            </form>
+
+        </div>
+    </div>
+
     <div class="home-icon">
         <a href="Index.html">
             <img src="images/bndsublogo.png" alt="home button">
@@ -37,5 +95,4 @@
     </footer>
 
 </body>
-
 </html>
