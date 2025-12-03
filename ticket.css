@@ -81,25 +81,6 @@ h3 {
     width: 30px;
 }
 
-
-/* HOME ICON */
-.home-icon {
-    text-align: center;
-    margin-bottom: 60px;
-    margin-top: 40px;
-}
-
-.home-icon img {
-    width: 125px;
-    filter: grayscale(100%) brightness(0);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.home-icon img:hover {
-    transform: scale(1.1);
-}
-
 /* === SEATING PLAN STYLES === */
 .seating-section {
     text-align: center;
@@ -249,6 +230,24 @@ h3 {
 
 .submit-btn:hover {
     background-color: #4dabe0;
+}
+
+/* HOME ICON */
+.home-icon {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.home-icon img {
+    width: 125px;
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-icon img:hover {
+    transform: scale(1.1);
 }
 
 /* FOOTER */
