@@ -139,7 +139,9 @@ a {
 }
 
 .continue-btn {
-    display: block; /* Added: Makes the link fill the width like a button */
+    display: flex;               /* Keep this */
+    justify-content: center;     /* NEW: This centers text horizontally */
+    align-items: center;         /* NEW: This centers text vertically */
     width: 100%;
     padding: 15px;
     background: linear-gradient(to right, #6ebcf7, #5daaf0);
@@ -151,15 +153,18 @@ a {
     cursor: pointer;
     text-transform: uppercase;
     transition: opacity 0.2s;
-    
-    /* Added: Ensures text is centered and has no underline */
-    text-align: center; 
     text-decoration: none; 
 }
 
 .continue-btn:hover {
-    opacity: 0.9;
+    opacity: 0.9;             /* Makes it slightly see-through */
+    background-color: #5aa1db;
 }
+
+.continue-btn:hover {
+    background-color: #5aa1db;
+}
+
 
 /* Mobile adjustments to keep the cart looking good on small screens */
 @media (max-width: 480px) {
