@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    /* Background Image */
+    background: #f0f8ff url("images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+}
+
+/* HEADINGS */
+h1,
+h2,
+h3 {
+    font-family: 'Arial Black', sans-serif;
+    line-height: 1.2;
+}
+
+/* --- Section Headers (The Pills) --- */
+.section-header {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.section-header h2 {
+    display: inline-block;
+    background-color: #fff;
+    border: 3px solid #5DADE2;
+    /* Reduced padding slightly to prevent it from breaking on small screens */
+    padding: 30px 150px;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 0;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*Header Bar*/
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+
+    /* Full Width "Covered" Styles */
+    background-color: #ffffff;
+    width: 100%;
+    /* Covers the whole top */
+    margin: 0;
+    border-bottom: 3px solid #4d8fe0;
+    /* Line at the bottom to separate it */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #0075b4;
+    font-weight: bold;
+    width: 30px;
+}
+
+.logo-container {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.spacer {
+    width: 30px;
+}
+
+/* --- MAIN CONFIRMATION CONTENT --- */
+.confirmation-container {
+    flex: 1; /* Pushes footer down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Green/Blue Checkmark Circle */
+.success-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #2ECC71; /* Success Green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.success-circle span {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.thank-you-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.success-subtext {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Details Box */
+.ticket-details-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    border-top: 5px solid #5DADE2; /* Matches your theme color */
+}
+
+.booking-text {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: #777;
+    font-weight: bold;
+}
+
+.value {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Primary Button (Fill) */
+.btn-primary {
+    background-color: #5DADE2;
+    color: white;
+    border: 2px solid #5DADE2;
+}
+
+/* Secondary Button (Outline) */
+.btn-secondary {
+    background-color: white;
+    color: #5DADE2;
+    border: 2px solid #5DADE2;
+}
+
+/* HOME ICON */
+.home-icon {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.home-icon img {
+    width: 125px;
+    filter: grayscale(100%) brightness(0);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #96c9f3;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.footer-left .footer-brand-logo {
+    width: 250px;
+    display: block;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 20px;
+    color: #000;
+}
+
+.footer-right h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.footer-right p {
+    margin: 5px 0;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.privacy-link {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-left .footer-brand-logo {
+        width: 250px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
