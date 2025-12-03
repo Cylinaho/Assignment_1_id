@@ -154,20 +154,24 @@ h3 {
 }
 
 .vip {
-    background-color: #FFD700;
+    background-color: #5DADE2;
 }
 
 /* Gold */
 .cat1 {
-    background-color: #5DADE2;
+    background-color: #5de2a6;
 }
 
 /* Blue */
 .cat2 {
-    background-color: #90EE90;
+    background-color: #f9975a;
 }
 
 /* Green */
+.cat3 {
+
+    background-color: #93f7de;
+}
 
 
 /* === BOOKING FORM STYLES === */
