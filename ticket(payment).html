@@ -18,24 +18,123 @@
         <div class="spacer"></div>
     </header>
 
-<div class="home-icon">
-    <a href="Index.html">
-        <img src="images/bndsublogo.png" alt="home button">
-    </a>
-</div>
+    <div class="payment-wrapper">
+        <div class="payment-card">
+            
+            <form action="#" method="POST">
+                
+                <h2 class="form-section-title">Contact Details</h2>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile">
+                </div>
 
-<footer class="main-footer">
-    <div class="footer-left">
-        <img src="images/kozlogo.png" alt="KOZ Logo" class="footer-brand-logo">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <h2 class="form-section-title">Payment Method Details</h2>
+
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="expiry">Expiration Date (MM / YY)</label>
+                        <input type="text" id="expiry" name="expiry">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="security-code">Security Code</label>
+                        <input type="text" id="security-code" name="security-code">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-name">Name on card</label>
+                    <input type="text" id="card-name" name="card-name">
+                </div>
+
+                <h2 class="form-section-title">Delivery Method</h2>
+                <div class="form-group">
+                    <input type="text" value="Mobile Ticket (E-Ticket)" readonly style="background-color: #f9f9f9;">
+                </div>
+
+                <h2 class="form-section-title">Ticket Information</h2>
+                
+                <div class="ticket-info-box">
+                    <div class="info-group">
+                        <h4 class="info-label">Item</h4>
+                        <p class="info-text">BOYNEXTDOOR TOUR 'KNOCK ON Vol.1' IN SINGAPORE Concert</p>
+                        <p class="info-text">Date: 15 March 2025</p>
+                        <p class="info-text">Time: 7:00pm to 9:00pm</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h4 class="info-label">Seat Info</h4>
+                        <p class="info-text">SEATED PEN 3 (VIP)</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h4 class="info-label">Ticket Info</h4>
+                        <p class="info-text">VIP SEATED PEN 3</p>
+                        <p class="info-text">VIP $298.00</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h4 class="info-label">Booking Fee</h4>
+                        <p class="info-text">$8.00</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h4 class="info-label">Subtotal</h4>
+                        <p class="info-text">$306.00</p>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="total-row">
+                        <span class="total-label">Total</span>
+                        <span class="total-amount">$306.00</span>
+                    </div>
+
+                    <div class="order-no">
+                        Order No. 18459012
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-btn">PAY</button>
+
+            </form>
+        </div>
     </div>
 
-    <div class="footer-right">
-        <h3>KOZ ENTERTAINMENT</h3>
-        <p>A. 42, Hangang daero, Yongsan gu, Seoul, 04389</p>
-        <p>ALL RIGHTS RESERVED. &copy; 2025 KOZ ENTERTAINMENT</p>
-        <a href="#" class="privacy-link">PRIVACY POLICY</a>
+    <div class="home-icon">
+        <a href="Index.html">
+            <img src="images/bndsublogo.png" alt="home button">
+        </a>
     </div>
-</footer>
+
+    <footer class="main-footer">
+        <div class="footer-left">
+            <img src="images/kozlogo.png" alt="KOZ Logo" class="footer-brand-logo">
+        </div>
+
+        <div class="footer-right">
+            <h3>KOZ ENTERTAINMENT</h3>
+            <p>A. 42, Hangang daero, Yongsan gu, Seoul, 04389</p>
+            <p>ALL RIGHTS RESERVED. &copy; 2025 KOZ ENTERTAINMENT</p>
+            <a href="#" class="privacy-link">PRIVACY POLICY</a>
+        </div>
+    </footer>
 
 </body>
 
