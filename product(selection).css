@@ -212,81 +212,75 @@ a { text-decoration: none; }
     background-color: #5aa1db;
 }
 
-* --- User Footer Integration --- */
-
-/* HOME ICON */
+/* --- FOOTER & HOME --- */
 .home-icon {
     text-align: center;
-    margin-bottom: 60px;
-    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 .home-icon img {
-    width: 150px;
-    filter: grayscale(100%) brightness(0);
+    width: 50px;
+    /* Forces the icon to be a black silhouette */
+    filter: brightness(0); 
     cursor: pointer;
     transition: transform 0.2s;
 }
+.home-icon img:hover { transform: scale(1.1); }
 
-.home-icon img:hover {
-    transform: scale(1.1);
-}
-
-/* FOOTER */
 .main-footer {
+    background-color: #AECDE8; /* Matches the light blue footer */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 10%;
-    background-color: #96c9f3;
-    margin-top: 50px;
-    text-align: left;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer-left .footer-brand-logo {
-    width: 400px;
-    display: block;
+    width: 100px; /* Smaller logo size */
+    mix-blend-mode: multiply; /* Blends logo into background */
 }
 
 .footer-right {
-    text-align: left;
-    font-size: 24px;
+    text-align: right;
     color: #000;
 }
 
 .footer-right h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Arial Black', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 4px;
 }
 
 .footer-right p {
-    margin: 5px 0;
+    font-size: 9px;
     line-height: 1.4;
-    font-size: 16px; 
+    opacity: 0.8;
 }
 
 .privacy-link {
     text-decoration: underline;
-    color: #001285;
-    font-weight: bold;
-    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    font-size: 9px;
+    display: inline-block;
+    margin-top: 4px;
 }
 
-/* RESPONSIVE FOOTER */
-@media (max-width: 768px) {
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 450px) {
+    .product-card {
+        padding: 15px;
+        gap: 15px;
+    }
+    .product-title {
+        font-size: 16px;
+    }
     .main-footer {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
     }
-
-    .footer-left .footer-brand-logo {
-        width: 250px;
-    }
-
     .footer-right {
         text-align: center;
     }
