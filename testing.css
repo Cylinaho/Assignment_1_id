@@ -9,15 +9,17 @@ body {
     font-family: 'Fredoka', sans-serif;
     /* Soft Blue Grid Background */
     background-color: #f0f8ff;
-    background:  #f0f8ff url("images/background.jpg");
-    background-size: cover;
-    background-attachment: fixed; 
+    background-image: 
+        linear-gradient(#cce4f7 2px, transparent 2px),
+        linear-gradient(90deg, #cce4f7 2px, transparent 2px);
+    background-size: 50px 50px;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
 /* --- 2. HEADER --- */
 .top-nav {
@@ -29,7 +31,9 @@ a {
     width: 100%;
     border-bottom: 3px solid #4d8fe0; /* Line at the bottom to separate it */
     position: sticky;
+    top: 0;
     margin: 0;
+    z-index: 1000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -37,6 +41,7 @@ a {
     color: #0075b4;
     display: flex;
     align-items: center;
+    font-size: 24px; /* Added size for visibility if using text */
 }
 
 .logo-container {
@@ -46,7 +51,6 @@ a {
 
 .header-logo {
     height: 100px;
-    /* Adjusted size */
     width: auto;
     display: block;
     margin: 0 auto;
@@ -59,10 +63,8 @@ a {
 }
 
 .nav-bag-icon {
-    width: 50px;
+    width: 50px; 
     height: auto;
-    /* If your icon is black, this filter turns it blue-ish to match the theme */
-    /* Remove this line if your icon image is already blue */
     filter: invert(61%) sepia(66%) saturate(1003%) hue-rotate(186deg) brightness(98%) contrast(92%);
 }
 
@@ -72,22 +74,18 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Vertically center */
     padding: 20px;
 }
 
 .product-card {
     background-color: #ffffff;
-    /* The blue border outline */
     border: 2px solid #6cb4ee;
     border-radius: 15px;
     padding: 20px;
     display: flex;
     flex-direction: row;
-    /* Side by side layout */
     gap: 20px;
     max-width: 800px;
-    /* Limits width so it looks like the mobile screenshot */
     width: 100%;
     box-shadow: 0 4px 15px rgba(108, 180, 238, 0.2);
     align-items: flex-start;
@@ -96,7 +94,6 @@ a {
 /* Left Image Column */
 .product-image-col {
     flex: 1;
-    /* Takes up about 40-50% space */
     display: flex;
     justify-content: center;
 }
@@ -106,13 +103,12 @@ a {
     height: auto;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Right Details Column */
 .product-details-col {
     flex: 1.2;
-    /* Takes slightly more space for text */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -121,7 +117,6 @@ a {
 
 .product-title {
     font-size: 24px;
-    /* Adjusted for mobile scale */
     font-weight: 700;
     line-height: 1.2;
     color: #000;
@@ -153,7 +148,6 @@ a {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    /* Rounded corners */
     background: white;
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
@@ -190,12 +184,21 @@ a {
     color: #000;
     font-weight: bold;
     padding: 0 5px;
+    min-width: 30px; /* Ensure touch target size */
+}
+
+/* Disable hover effect for disabled buttons */
+.qty-btn:disabled {
+    color: #ccc;
+    cursor: default;
 }
 
 .qty-num {
     font-weight: 600;
     font-size: 14px;
     padding: 0 10px;
+    min-width: 20px;
+    text-align: center;
 }
 
 /* --- ADD TO CART --- */
@@ -212,6 +215,7 @@ a {
     width: 100%;
     font-family: 'Fredoka', sans-serif;
     box-shadow: 0 4px 6px rgba(108, 180, 238, 0.3);
+    transition: background-color 0.2s;
 }
 
 .add-to-cart-btn:hover {
@@ -219,8 +223,6 @@ a {
 }
 
 /* --- User Footer Integration --- */
-
-/* HOME ICON */
 .home-icon {
     text-align: center;
     margin-bottom: 60px;
@@ -234,11 +236,8 @@ a {
     transition: transform 0.2s;
 }
 
-.home-icon img:hover {
-    transform: scale(1.1);
-}
+.home-icon img:hover { transform: scale(1.1); }
 
-/* FOOTER */
 .main-footer {
     display: flex;
     justify-content: space-between;
@@ -282,17 +281,19 @@ a {
 
 /* RESPONSIVE FOOTER */
 @media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-image-col, .product-details-col {
+        width: 100%;
+    }
     .main-footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 20px;
     }
-
-    .footer-left .footer-brand-logo {
-        width: 250px;
-    }
-
     .footer-right {
         text-align: center;
     }
