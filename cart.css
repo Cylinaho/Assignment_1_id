@@ -139,9 +139,10 @@ a {
 }
 
 .continue-btn {
+    display: block; /* Added: Makes the link fill the width like a button */
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to right, #6ebcf7, #5daaf0); /* Gradient blue */
+    background: linear-gradient(to right, #6ebcf7, #5daaf0);
     border: none;
     border-radius: 10px;
     color: white;
@@ -150,6 +151,10 @@ a {
     cursor: pointer;
     text-transform: uppercase;
     transition: opacity 0.2s;
+    
+    /* Added: Ensures text is centered and has no underline */
+    text-align: center; 
+    text-decoration: none; 
 }
 
 .continue-btn:hover {
