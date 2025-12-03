@@ -254,6 +254,10 @@ h3 {
     padding: 15px;
     border: none;
     border-radius: 5px;
+    display: flex;           /* Turns on Flexbox */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;     /* Centers text vertically */
+
     cursor: pointer;
     margin-top: 20px;
     transition: background 0.3s;
