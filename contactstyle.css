@@ -19,9 +19,7 @@ body {
 }
 
 /* HEADINGS */
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     font-family: 'Arial Black', sans-serif;
     line-height: 1.2;
 }
@@ -68,15 +66,13 @@ h3 {
     background: #b3d8ff;
 }
 
-/* --- CONTACT PAGE SPECIFIC STYLES --- */
+/* CONTACT PAGE SPECIFIC STYLES */
 
-/* 1. DARK HERO SECTION (BIGGER) */
+/* DARK HERO SECTION (BIGGER) */
 .contact-hero {
     width: 100%;
-    /* CHANGED: Increased height to make the section bigger */
     height: 600px;
     background-color: #333;
-    /* Replace with your acoustic foam image */
     background-image: url("images/contactimg.png");
     background-size: cover;
     background-position: center;
@@ -91,16 +87,14 @@ h3 {
     height: auto;
 }
 
-/* 2. TEXT SECTION (CENTERED WHITE BOX WITH BORDER) */
+/* TEXT SECTION (CENTERED WHITE BOX WITH BORDER) */
 .mission-section {
     background-color: white;
     border: 3px solid #3fa9f5;
     border-radius: 25px;
     padding: 60px 80px;
-    max-width: 1100px;
-    /* Limits width so it's not full screen */
-    margin: 0 auto 50px auto;
-    /* Centers the box in the middle of the page */
+    max-width: 1100px; /* Limits width so it's not full screen */
+    margin: 0 auto 50px auto; /* Centers the box in the middle of the page */
 }
 
 .content-wrapper {
@@ -133,11 +127,10 @@ h3 {
     line-height: 1.6;
 }
 
-/* 3. SOCIAL ICONS (Aligned Right) */
+/* SOCIAL ICONS (Aligned Right) */
 .social-icons-container {
     display: flex;
-    justify-content: flex-end;
-    /* Aligns icons to the RIGHT */
+    justify-content: flex-end; /* Aligns icons to the RIGHT */
     gap: 15px;
     margin-top: 20px;
 }
@@ -153,8 +146,6 @@ h3 {
     transform: scale(1.1);
 }
 
-
-/* --- HOME ICON & FOOTER --- */
 /* HOME ICON */
 .home-icon {
     text-align: center;
