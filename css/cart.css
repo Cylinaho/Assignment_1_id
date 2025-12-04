@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Fredoka', sans-serif;
-    /* Soft Blue Grid Background */
     background-color: #f0f8ff;
     background: #f0f8ff url("images/background.jpg");
     background-size: cover;
@@ -19,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-/* --- 2. HEADER --- */
+/* HEADER */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -164,21 +163,6 @@ a {
 
 .continue-btn:hover {
     background-color: #5aa1db;
-}
-
-
-/* Mobile adjustments to keep the cart looking good on small screens */
-@media (max-width: 480px) {
-    .product-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .detail-row {
-        /* Keep details side-by-side even on mobile */
-        padding: 0 20px; 
-    }
 }
 
 /* HOME ICON */
