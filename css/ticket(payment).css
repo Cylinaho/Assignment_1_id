@@ -14,9 +14,7 @@ body {
 }
 
 /* HEADINGS */
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     font-family: 'Arial Black', sans-serif;
     line-height: 1.2;
 }

@@ -7,15 +7,14 @@
 body {
     font-family: 'Fredoka', sans-serif;
     /* Background Image */
-    background: #f0f8ff url("images/background.jpg");
+    background: #f0f8ff url("./images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: #000;
 }
 
 /* HEADINGS */
-h1,
-h2,
+h1,h2,
 h3 {
     font-family: 'Arial Black', sans-serif;
     line-height: 1.2;
