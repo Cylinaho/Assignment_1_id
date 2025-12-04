@@ -9,7 +9,7 @@ body {
     font-family: 'Fredoka', sans-serif;
     /* Soft Blue Grid Background */
     background-color: #f0f8ff;
-    background: #f0f8ff url("images/background.jpg");
+    background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: #000;

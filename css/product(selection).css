@@ -8,7 +8,7 @@ body {
     font-family: 'Fredoka', sans-serif;
     /* Soft Blue Grid Background */
     background-color: #f0f8ff;
-    background: #f0f8ff url("images/background.jpg");
+    background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: #000;
@@ -61,12 +61,11 @@ a {
 
 .nav-bag-icon {
     width: 50px;
-    /* Adjusted for preview */
     height: auto;
     filter: invert(61%) sepia(66%) saturate(1003%) hue-rotate(186deg) brightness(98%) contrast(92%);
 }
 
-/* --- 3. PRODUCT CARD --- */
+/* PRODUCT CARD */
 .content-wrapper {
     flex: 1;
     display: flex;
@@ -102,8 +101,7 @@ a {
     height: auto;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    /* Placeholder background if image missing */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Placeholder background if image missing */
     background-color: #ddd;
     min-height: 200px;
 }
@@ -130,7 +128,7 @@ a {
     color: #000;
 }
 
-/* --- CONTROLS --- */
+/* CONTROLS */
 .selection-group label {
     display: block;
     font-weight: 600;
@@ -145,14 +143,11 @@ a {
     flex-wrap: wrap;
 }
 
-/* --- NEW CSS FOR SELECTION (RADIO HACK) --- */
-
-/* 1. Hide the actual radio circle input */
+/* Hide the actual radio circle input */
 input[type="radio"].version-selector {
     display: none;
 }
 
-/* 2. Style the label to look exactly like your old button */
 .ver-btn {
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -165,11 +160,10 @@ input[type="radio"].version-selector {
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.2s;
-    display: inline-block;
-    /* Needed for labels */
+    display: inline-block; /* Needed for labels */
 }
 
-/* 3. When the invisible radio is CHECKED, style the label right after it */
+/* When the invisible radio is CHECKED, style the label right after it */
 input[type="radio"].version-selector:checked+.ver-btn {
     background-color: #6cb4ee;
     color: white;
@@ -177,8 +171,7 @@ input[type="radio"].version-selector:checked+.ver-btn {
     box-shadow: 0 2px 5px rgba(108, 180, 238, 0.4);
 }
 
-/* --- QUANTITY --- */
-/* Replaced old selector styles with Input Number styles */
+/*  QUANTITY */
 .qty-input-styled {
     border: 1px solid #ccc;
     border-radius: 20px;

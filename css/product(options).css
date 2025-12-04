@@ -8,7 +8,7 @@
 body {
     font-family: 'Fredoka', sans-serif;
     /* Background Image */
-    background: #f0f8ff url("images/background.jpg");
+    background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed; 
     color: #000;
