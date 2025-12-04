@@ -8,7 +8,7 @@
 body {
     font-family: 'Fredoka', sans-serif;
     background-color: #f0f8ff;
-    background: #f0f8ff url("images/background.jpg");
+    background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: #000;
@@ -140,8 +140,8 @@ a {
 
 .continue-btn {
     display: flex;               /* Keep this */
-    justify-content: center;     /* NEW: This centers text horizontally */
-    align-items: center;         /* NEW: This centers text vertically */
+    justify-content: center;     /* This centers text horizontally */
+    align-items: center;         /* This centers text vertically */
     width: 100%;
     padding: 15px;
     background: linear-gradient(to right, #6ebcf7, #5daaf0);
