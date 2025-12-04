@@ -20,9 +20,7 @@ body {
 }
 
 /* HEADINGS */
-h1,
-h2,
-h3 {
+h1,h2,h3 {
   font-family: 'Arial Black', sans-serif;
   line-height: 1.2;
 }
@@ -62,9 +60,9 @@ h3 {
   background: #b3d8ff;
 }
 
-/* --- PAGE LAYOUT --- */
+/* PAGE LAYOUT */
 
-/* 1. HERO IMAGE SECTION */
+/* HERO IMAGE SECTION (BND GRP PHOTO) */
 .hero-section {
   width: 100%;
   margin-bottom: 30px;
@@ -87,14 +85,14 @@ h3 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 2. MAIN WRAPPER */
+/* MAIN WRAPPER */
 .content-wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* 3. SECTION TITLES (THE PILLS) */
+/* SECTION TITLES (THE PILLS) */
 .section-header,
 .pill-title {
   text-align: center;
@@ -113,29 +111,24 @@ h3 {
   margin: 0;
 }
 
-/* 4. CONTENT BOXES (EXACT MATCH TO PIC) */
-/* Apply this style to ALL box classes found in your HTML */
+/* CONTENT BOXES (same styles for the card boxes)*/
 .content-card,
 .info-card,
 .blue-border-card,
 .debut-card,
 .awards-card {
   background-color: white;
-  /* The specific light blue border from the image */
   border: 3px solid #5DADE2;
   border-radius: 25px;
   padding: 50px;
   margin-bottom: 40px;
-  /* Clean look, no shadow inside the white area */
 }
 
-/* 5. FLEX LAYOUT (ALIGNMENT FIX) */
+/* FLEX LAYOUT (ALIGNMENT FIX) */
 .flex-row {
-  display: flex;
-  /* This centers the Image and Text vertically */
+  display: flex; /* This centers the Image and Text vertically */
   align-items: center;
-  gap: 60px;
-  /* Big gap between image and text */
+  gap: 60px; /* Big gap between image and text */
 }
 
 /* Left Side (Image) */
@@ -148,7 +141,7 @@ h3 {
   align-items: center;
 }
 
-/* Ensure images (like the Onedoor badge) don't overflow */
+/* Ensure images (like the Onedoor image) don't overflow */
 .card-left-visual img,
 .about-logo-img,
 .onedoor-badge-img {
@@ -175,21 +168,19 @@ h3 {
 /* Fandom Title Color */
 .blue-text,
 .cyan-title {
-  color: #009eb3;
-  /* Cyan/Teal color matching picture */
+  color: #009eb3; /* Cyan/Teal color matching picture */
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
-/* 6. SPLIT SECTION (DEBUT & AWARDS) */
+/* SPLIT SECTION (DEBUT & AWARDS) */
 .split-section {
   display: flex;
-  gap: 30px;
-  /* Space between Debut box and Awards box */
+  gap: 30px; /* Space between Debut box and Awards box */
 }
 
-/* --- DEBUT BOX SPECIFICS --- */
+/* DEBUT BOX SPECIFICS */
 .debut-card {
   flex: 0 0 250px;
   display: flex;
@@ -197,8 +188,7 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 250px;
-  /* Makes it square-ish */
+  height: 250px; /* Makes it square-ish */
 }
 
 .debut-card h3 {
@@ -208,16 +198,14 @@ h3 {
 }
 
 .debut-card p {
-  font-size: 1.5rem;
-  /* Big date text */
+  font-size: 1.5rem; /* Big date text */
   margin: 0;
   font-weight: normal;
 }
 
-/* --- AWARDS BOX SPECIFICS --- */
+/* AWARDS BOX SPECIFICS */
 .awards-card {
-  flex: 1;
-  /* Takes up remaining space */
+  flex: 1; /* Takes up remaining space */
 }
 
 .awards-card h3 {
@@ -234,16 +222,14 @@ h3 {
 .year,
 .year-label {
   display: block;
-  color: #3fa9f5;
-  /* Blue year matching border */
+  color: #3fa9f5; /* Blue year matching border */
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 .awards-card ul {
-  list-style: none;
-  /* REMOVES BULLET POINTS LIKE THE PIC */
+  list-style: none; /* REMOVES BULLET POINTS LIKE THE PIC */
   padding-left: 0;
   margin: 0;
 }
@@ -251,12 +237,11 @@ h3 {
 .awards-card li {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 600;
-  /* Slightly bold text like pic */
+  font-weight: 600; /* Slightly bold text like pic */
   margin-bottom: 3px;
 }
 
-/* 7. ALBUM GRID */
+/* ALBUM GRID */
 .album-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -274,8 +259,6 @@ h3 {
 .album-grid img:hover {
   transform: scale(1.05);
 }
-
-/* --- User Footer Integration --- */
 
 /* HOME ICON */
 .home-icon {
