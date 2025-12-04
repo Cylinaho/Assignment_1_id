@@ -211,7 +211,6 @@ a.product-item {
 }
 
 /* --- User Footer Integration --- */
-
 /* HOME ICON */
 .home-icon {
   text-align: center;
@@ -273,63 +272,19 @@ a.product-item {
 }
 
 /* RESPONSIVE FOOTER */
-/* --- MOBILE / TABLET FIXES (Max Width 768px) --- */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
 
-  /* 1. Fix Navigation Bar Stacking */
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .navbar li {
-    display: block;
-    width: 100%;
-  }
+    .footer-left .footer-brand-logo {
+        width: 250px;
+    }
 
-  .navbar a {
-    width: 100%;
-    /* Reduces the massive 120px padding to fit mobile */
-    padding: 15px 0; 
-    font-size: 18px;
-  }
-
-  /* 2. Fix Large Images */
-  /* This prevents the 1100px/1550px images from causing scrollbars */
-  .right-img, 
-  .center-img img {
-    width: 100% !important; /* Force image to fit screen width */
-    height: auto;
-  }
-
-  /* 3. Fix the Main Row Layout */
-  .row {
-    flex-direction: column-reverse; /* Puts text on top of image, or remove -reverse to keep original order */
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  /* 4. Fix Text Box Overlap & Width */
-  .text-box {
-    margin-right: 0; /* Removes the negative margin overlap */
-    max-width: 90%; /* Ensures box fits within the screen */
-    margin-bottom: 20px;
-  }
-
-  .secondtext-box {
-    width: 90%;
-  }
-
-  /* 5. Fix Video Size */
-  .video-container iframe {
-    width: 95%;
-  }
-
-  /* 6. Fix Giant Buttons */
-  .buy-btn {
-    padding: 15px 40px; /* Reduces button size */
-    width: 80%; /* Makes it look nice on mobile */
-    font-size: 18px;
-  }
+    .footer-right {
+        text-align: center;
+    }
 }
