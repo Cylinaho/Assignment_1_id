@@ -45,11 +45,8 @@ body {
 /* NAVIGATION BAR */
 .navbar {
   background: #ffffff;
-  /* Optional: Sticky nav if you want it to stay at top */
-  /* position: sticky; top: 0; z-index: 100; */
 }
 
-/* NAVIGATION BAR */
 .navbar ul {
   list-style: none;
   background: #ffffff;
