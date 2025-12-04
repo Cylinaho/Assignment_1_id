@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOYNEXTDOOR - Ticket</title>
-    <link href="ticket.css" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/ticket.css" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header class="top-nav">
         <a href="index.html" class="back-button">&lt;</a>
         <div class="logo-container">
-            <img src="images/bndlogowhite.png" alt="BOYNEXTDOOR Logo" class="header-logo">
+            <img src="./images/bndlogowhite.png" alt="BOYNEXTDOOR Logo" class="header-logo">
         </div>
         <div class="spacer"></div>
     </header>
 
+    <!-- TICKETING PAGE CONTENTS -->
     <div class="seating-section">
         <h2 class="section-title">SEATING PLAN</h2>
         <p class="subtitle">BOYNEXTDOOR TOUR 'KNOCK ON VOL.1' IN SINGAPORE</p>
 
         <div class="map-container">
-            <img src="images/concert/stage.jpg" alt="Seating Plan" class="seat-img">
+            <img src="./images/concert/stage.jpg" alt="Seating Plan" class="seat-img">
         </div>
 
         <div class="legend-box">
@@ -33,18 +36,21 @@
             <span class="dot cat3"></span> CAT 3
         </div>
 
+        <!-- DISCLAIMER RED-->
         <div class="admission-info">
             <p><strong>IMPORTANT:</strong> For standing, no admission for children aged below 12 years old and/or height
                 below 1.2 metres.</p>
         </div>
     </div>
 
+    <!-- TICKET FORM -->
     <div class="booking-wrapper">
         <div class="booking-box">
             <h2 class="form-title">Book a Ticket</h2>
 
             <form action="#" method="POST">
 
+                <!-- OPTIONS FOR USER TO SELECT -->
                 <div class="form-group">
                     <label>Ticket Type</label>
                     <select id="ticketType" required>
@@ -56,11 +62,13 @@
                     </select>
                 </div>
 
+                <!-- FOLLOWS THE TOP ONE -->
                 <div class="form-group">
                     <label>Price</label>
                     <input type="text" id="ticketPrice" class="form-control" placeholder="$0.00" readonly>
                 </div>
 
+                <!-- SLIDER FOR USER TO INTERACT (MAX = 10)-->
                 <div class="form-group">
                     <label>Qty</label>
                     <input type="number" min="1" max="10" value="1" required>
@@ -73,31 +81,33 @@
     </div>
 
     <script>
-        // 1. Get the elements
+        /* Get the elements */
         const ticketSelect = document.getElementById('ticketType');
         const priceInput = document.getElementById('ticketPrice');
 
-        // 2. Add an event listener for when the user changes the dropdown
+        /* Add an event listener for when the user changes the dropdown */
         ticketSelect.addEventListener('change', function () {
-            // Get the value (price) from the selected option
+            /* Get the value (price) from the selected option */
             const selectedPrice = this.value;
 
-            // Update the price input box
+            /* Update the price input box */
             priceInput.value = '$' + selectedPrice + '.00';
         });
     </script>
 
 </body>
 
+<!-- HOME ICON -->
 <div class="home-icon">
     <a href="Index.html">
-        <img src="images/bndsublogo.png" alt="home button">
+        <img src="./images/bndsublogo.png" alt="home button">
     </a>
 </div>
 
+<!-- FOOTER -->
 <footer class="main-footer">
     <div class="footer-left">
-        <img src="images/kozlogo.png" alt="KOZ Logo" class="footer-brand-logo">
+        <img src="./images/kozlogo.png" alt="KOZ Logo" class="footer-brand-logo">
     </div>
 
     <div class="footer-right">
