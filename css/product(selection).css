@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-/* --- 2. HEADER --- */
+/* HEADER */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -184,7 +184,7 @@ input[type="radio"].version-selector:checked+.ver-btn {
     outline: none;
 }
 
-/* --- ADD TO CART --- */
+/* ADD TO CART */
 .add-to-cart-btn {
     margin-top: 10px;
     background-color: #6cb4ee;
