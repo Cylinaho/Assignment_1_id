@@ -7,20 +7,19 @@
 body {
     font-family: 'Fredoka', sans-serif;
     /* Background Image */
-    background: #f0f8ff url("./images/background.jpg");
+    background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: #000;
 }
 
 /* HEADINGS */
-h1,h2,
-h3 {
+h1,h2,h3 {
     font-family: 'Arial Black', sans-serif;
     line-height: 1.2;
 }
 
-/* --- Section Headers (The Pills) --- */
+/* Section Headers (The Pills) */
 .section-header {
     text-align: center;
     margin: 40px 0 20px 0;
@@ -30,7 +29,6 @@ h3 {
     display: inline-block;
     background-color: #fff;
     border: 3px solid #5DADE2;
-    /* Reduced padding slightly to prevent it from breaking on small screens */
     padding: 30px 150px;
     border-radius: 20px;
     font-size: 1.8rem;
@@ -39,7 +37,7 @@ h3 {
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* --- UPDATED: Header Bar (Covered) --- */
+/* Header Bar (Covered) */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -80,12 +78,11 @@ h3 {
     width: 30px;
 }
 
-/* === SEATING PLAN STYLES === */
+/* SEATING PLAN STYLES */
 .seating-section {
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Slight white background to make text pop */
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background to make text pop */
     margin: 20px auto;
     max-width: 800px;
 }
@@ -111,7 +108,6 @@ h3 {
 .seat-img {
     width: 100%;
     max-width: 600px;
-    /* Limits size so it doesn't get too huge */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -154,7 +150,7 @@ h3 {
 }
 
 
-/* === BOOKING FORM STYLES === */
+/* BOOKING FORM STYLES */
 .booking-wrapper {
     display: flex;
     justify-content: center;
@@ -163,12 +159,10 @@ h3 {
 
 .booking-box {
     background-color: white;
-    border: 3px solid #5DADE2;
-    /* The Blue Border */
+    border: 3px solid #5DADE2; /* The Blue Border */
     padding: 30px 40px;
     width: 100%;
     max-width: 450px;
-    /* Width of the form box */
     text-align: left;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -207,7 +201,7 @@ h3 {
     margin-right: auto;
 }
 
-/* Style the Dropdown to look like your underlines */
+/* Style the Dropdown line*/
 .form-group select {
     width: 100%;
     border: none;
@@ -225,12 +219,11 @@ h3 {
     border-bottom: 2px solid #5DADE2;
 }
 
-/* Styling inputs to look like lines (as per image) */
+/* Styling inputs */
 .form-group input {
     width: 100%;
     border: none;
-    border-bottom: 2px solid #aaddff;
-    /* Light blue underline */
+    border-bottom: 2px solid #aaddff; /* Light blue underline */
     padding: 5px 0;
     font-size: 16px;
     outline: none;
@@ -239,8 +232,7 @@ h3 {
 }
 
 .form-group input:focus {
-    border-bottom: 2px solid #5DADE2;
-    /* Darker blue when clicked */
+    border-bottom: 2px solid #5DADE2; /* Darker blue when clicked */
 }
 
 /* SUBMIT BUTTON */

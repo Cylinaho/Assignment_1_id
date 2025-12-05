@@ -196,7 +196,7 @@ body {
   background: #4d8ec3;
 }
 
-/* --- LINK STYLING --- */
+/* LINK STYLING */
 a.product-item {
   text-decoration: none; /* Removes underline */
   color: inherit; /* Keeps original colors */

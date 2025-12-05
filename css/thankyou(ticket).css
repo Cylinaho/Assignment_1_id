@@ -6,8 +6,7 @@
 
 body {
     font-family: 'Fredoka', sans-serif;
-    /* Background Image */
-    background: #f0f8ff url("images/background.jpg");
+    background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: #000;
@@ -22,7 +21,7 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-/* --- HEADER --- */
+/* HEADER */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -58,7 +57,7 @@ h1, h2, h3 {
     width: 30px;
 }
 
-/* --- MAIN CONTENT & RECEIPT CARD (This was missing) --- */
+/* MAIN CONTENT & RECEIPT CARD */
 .main-content {
     flex: 1;
     display: flex;
@@ -160,7 +159,7 @@ h1, h2, h3 {
     font-weight: 800;
 }
 
-/* Buttons (Fixed the missing container styles) */
+/* Buttons */
 .button-container {
     display: flex;
     flex-direction: column;
@@ -187,7 +186,7 @@ h1, h2, h3 {
     background-color: #5aaBE0;
 }
 
-/* HOME ICON (Bottom) */
+/* HOME ICON */
 .home-icon {
     text-align: center;
     margin-bottom: 40px;
@@ -195,7 +194,7 @@ h1, h2, h3 {
 }
 
 .home-icon img {
-    width: 100px; /* Adjusted size */
+    width: 100px; 
     cursor: pointer;
     transition: transform 0.2s;
 }

@@ -1,4 +1,4 @@
-/* --- General Reset & Fonts --- */
+/* General Reset & Fonts */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Fredoka', sans-serif;
-    /* Background Image */
     background: #f0f8ff url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed; 
@@ -20,7 +19,7 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-/* --- Section Headers (The Pills) --- */
+/* Section Headers (The Pills) */
 .section-header {
     text-align: center;
     margin: 40px 0 20px 0;
@@ -151,7 +150,7 @@ h1, h2, h3 {
     margin-top: auto; 
 }
 
-/* --- IMPORTANT FIX: LINK STYLING --- */
+/* LINK STYLING */
 /* This prevents the first clickable product from looking like a text link */
 a.product-item {
     text-decoration: none; /* Removes underline */
