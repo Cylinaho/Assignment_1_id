@@ -19,7 +19,7 @@ a {
     text-decoration: none;
 }
 
-/* --- 2. HEADER --- */
+/* HEADER */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -55,8 +55,6 @@ a {
     display: block;
     margin: 0 auto;
 }
-
-/* --- NEW CHECKOUT FORM STYLES --- */
 
 /* Wrapper to center the card on the page */
 .checkout-wrapper {
@@ -149,7 +147,6 @@ input[type="tel"] {
     padding: 12px;
     margin-bottom: 10px;
     border: 1px solid #b3d9ff;
-    /* Light blue border */
     border-radius: 8px;
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
@@ -161,7 +158,6 @@ input[type="tel"] {
 
 input::placeholder {
     color: #333;
-    /* Dark placeholder text like the image */
     font-weight: 700;
 }
 
