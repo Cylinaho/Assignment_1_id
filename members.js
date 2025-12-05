@@ -136,7 +136,10 @@ members.forEach(member => {
         <img src="${member.image}" class="member-photo" alt="${member.name}" title="Click me!">
         
         <div class="member-info-middle">
-
+            <h2>
+                ${member.name} 
+                <button class="bias-btn" title="Set as Bias">❤</button>
+            </h2>
             <ul>
                 ${member.stats.map(stat => `<li>${stat}</li>`).join("")}
             </ul>
@@ -175,4 +178,16 @@ members.forEach(member => {
 
     // Append the card to the container (Only happens once per member)
     container.appendChild(card);
+
+    // Handle the Heart (Bias) Click
+    const heartBtn = card.querySelector(".bias-btn");
+    heartBtn.addEventListener("click", function() {
+        // Toggle the 'active' class (turns it red via CSS)
+        this.classList.toggle("active");
+        
+        // Alert to show it works
+        if(this.classList.contains("active")) {
+            alert("You picked " + member.name + " as your bias!");
+        }
+    });
 });

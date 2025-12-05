@@ -207,6 +207,24 @@ body {
     animation: fadeIn 0.5s;
 }
 
+/* BIAS BUTTON STYLES */
+.bias-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #63b1e9; /* Grey by default */
+    transition: transform 0.2s, color 0.3s;
+    margin-left: 10px;
+}
+
+.bias-btn:hover {
+    transform: scale(1.2);
+}
+
+.bias-btn.active {
+    color: #ff616f; /* Red when active */
+}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
