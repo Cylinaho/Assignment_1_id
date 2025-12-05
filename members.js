@@ -140,6 +140,7 @@ members.forEach(member => {
             <ul>
                 ${member.stats.map(stat => `<li>${stat}</li>`).join("")}
             </ul>
+            <button class="toggle-facts-btn">Show Facts</button>
         </div>
 
         <div class="member-facts-right" style="display: none;">
@@ -149,6 +150,22 @@ members.forEach(member => {
             </ul>
         </div>
     `;
+
+    // 3. Button Interaction: Show/Hide Facts
+    const toggleBtn = card.querySelector(".toggle-facts-btn");
+    const factsDiv = card.querySelector(".member-facts-right");
+
+    toggleBtn.addEventListener("click", () => {
+        if (factsDiv.style.display === "none") {
+            // Show the facts
+            factsDiv.style.display = "block";
+            toggleBtn.textContent = "Hide Facts"; 
+        } else {
+            // Hide the facts
+            factsDiv.style.display = "none";
+            toggleBtn.textContent = "Show Facts"; 
+        }
+    });
 
     // Image Interaction: Click to say Hello
     const image = card.querySelector(".member-photo");

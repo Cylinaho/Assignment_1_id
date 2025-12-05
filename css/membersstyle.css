@@ -184,6 +184,30 @@ body {
     box-shadow: 0 0 15px rgba(93, 173, 226, 0.6); /* Blue glow */
 }
 
+/* Style the new Toggle Button */
+.toggle-facts-btn {
+    background-color: #5DADE2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.toggle-facts-btn:hover {
+    background-color: #3498DB;
+}
+
+/* Animation for the facts appearing */
+.member-facts-right {
+    animation: fadeIn 0.5s;
+}
+
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
