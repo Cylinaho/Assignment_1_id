@@ -105,6 +105,8 @@ Member Page:
 
 - Test Home icon links back to home page.
 
+- Check all the interactable that is create in javascript working (image clickable, heart bias, and facts button)
+
 - Check if the privacy policy is link properly.
 
 Contact Page: 
