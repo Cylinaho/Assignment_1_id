@@ -28,3 +28,99 @@ As a concert-goer, I want to view upcoming events and book tickets easily so tha
 As a casual visitor, I want a simple navigation menu so that I can explore the site effortlessly.
 
 Wireframes & Mockups
+
+my figma link: https://www.figma.com/design/Evlfsuo3D01qPd3cS3md1k/BOYNEXTDOOR-HTML-DESIGN?node-id=0-1&t=rqfgZBu78VCflEYM-1
+
+Features
+Existing Features
+
+Member Profiles – Allows users to learn about each BOYNEXTDOOR member by providing clear bios and photos.
+
+Achievements Timeline – Displays the group’s milestones and accomplishments over the years.
+
+Merchandise Store – Allows fans to browse and purchase official band merchandise in one place.
+
+Concert Booking Page – Lets users view upcoming tours and easily book tickets.
+
+Features Left to Implement
+
+Fan Community Forum – A discussion space where fans can connect and share posts.
+
+Multilingual Support – Add Korean, Japanese, and Chinese language versions.
+
+Dark/Light Mode Toggle – For better visual comfort and customisation.
+
+Technologies Used
+
+HTML5 – For structuring the web pages.
+
+CSS3 – For styling, layout, and responsive design.
+
+JavaScript – Used to add interactivity and dynamic functionality.
+
+Pinterest - For ideas of layout of a website.
+
+Figma – Used to design wireframes and plan the layout before development.
+
+Testing
+Manual Testing Scenarios
+
+Navigation Bar:
+
+Click through each link to confirm all pages load correctly.
+
+Test navigation on both desktop and mobile screens.
+
+Index Page: 
+
+Test the layout is right for the images and text_box containers
+
+Test “CLICK HERE TO BUY” and "EXPLORE" buttons.
+
+Test Home icon links back to home page.
+
+Check if the privacy policy is link properly.
+
+Product Page:
+
+Check if items load properly.
+
+Test “CLICK HERE TO BUY” buttons.
+
+Concert Booking Page:
+
+Test ticket image layout is correct.
+
+Test the ticket type have a drop down list for users to interact.
+
+Check if the price matches with whatever user chooses.
+
+Test if the quantity work.
+
+Responsive Layout:
+
+Tested on Chrome
+
+Notable Bugs Found
+
+mobile doesnt work.
+
+Mobile menu layout may occasionally overlap when resizing the browser window.
+
+Credits
+Content
+
+All BOYNEXTDOOR information written manually and referenced from verified sources such as official pages and interviews.
+
+Media
+Pinterest for group photos and ID were used.
+
+Images used belong to KOZ Entertainment / HYBE (for educational project use).
+
+Icons sourced from free icon libraries such as Flaticon.
+
+Acknowledgements
+
+Inspiration for this fan-site came from browsing multiple K-POP fan websites and wanting a simpler, cleaner alternative.
+
+Thanks to classmates and online tutorials for guidance throughout the design and development process.
