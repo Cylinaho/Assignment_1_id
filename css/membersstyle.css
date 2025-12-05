@@ -120,13 +120,12 @@ body {
     text-align: left;
 }
 
-/* --- BIGGER NAME --- */
+/* NAME TITLE */
 .member-info-middle h2 {
     font-family: 'Arial Black', sans-serif;
     color: #d32b2b;
     margin: 0 0 20px 0;
     font-size: 48px;
-    /* Increased from 32px to 48px */
     text-transform: uppercase;
 }
 
@@ -136,10 +135,9 @@ body {
     list-style: none;
 }
 
-/* --- UPDATED: BIGGER INFO TEXT --- */
+/* INFO TEXT */
 .member-info-middle li {
     font-size: 20px;
-    /* Increased from 14px to 20px */
     line-height: 1.6;
     margin-bottom: 8px;
     color: #333;
@@ -149,20 +147,17 @@ body {
 .member-facts-right {
     flex: 1;
     border-left: 2px solid #eee;
-    /* Made divider slightly thicker */
     padding-left: 25px;
 }
 
-/* --- UPDATED: BIGGER FACTS TITLE --- */
+/* FACTS TITLE */
 .facts-title {
     font-weight: bold;
     font-size: 22px;
-    /* Increased from 16px to 22px */
     margin-bottom: 15px;
     display: block;
     color: #000;
     text-decoration: underline;
-    /* Optional: underlines "Facts:" */
 }
 
 .member-facts-right ul {
@@ -170,10 +165,9 @@ body {
     margin: 0;
 }
 
-/* --- UPDATED: BIGGER FACTS TEXT --- */
+/* FACTS TEXT */
 .member-facts-right li {
     font-size: 18px;
-    /* Increased from 13px to 18px */
     line-height: 1.5;
     margin-bottom: 8px;
     list-style-type: disc;
@@ -207,8 +201,6 @@ body {
         text-align: left;
     }
 }
-
-/* --- User Footer Integration --- */
 
 /* HOME ICON */
 .home-icon {
