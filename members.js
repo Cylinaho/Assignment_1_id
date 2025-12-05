@@ -41,7 +41,7 @@ const members = [
     },
     {
         name: "JAEHYUN",
-        // Note: Using the filename you provided: Jeahyun.jpg
+        // Using the filename you provided: Jeahyun.jpg
         image: "images/members/Jeahyun.jpg",
         stats: [
             "<b>Birth Name:</b> Myung Jae-hyun (명재현)",
@@ -104,7 +104,7 @@ const members = [
     },
     {
         name: "WOONHAK",
-        // Note: Using the filename you provided: wookhak.jpg
+        // Using the filename you provided: wookhak.jpg
         image: "images/members/wookhak.jpg",
         stats: [
             "<b>Birth Name:</b> Kim Woon-hak (김운학)",
@@ -132,18 +132,17 @@ members.forEach(member => {
     const card = document.createElement("div");
     card.className = "member-card";
 
-    // We create 3 columns: Image, Stats (Middle), Facts (Right)
     card.innerHTML = `
-        <img src="${member.image}" class="member-photo" alt="${member.name}">
+        <img src="${member.image}" class="member-photo" alt="${member.name}" title="Click me!">
         
         <div class="member-info-middle">
-            <h2>${member.name}</h2>
+
             <ul>
                 ${member.stats.map(stat => `<li>${stat}</li>`).join("")}
             </ul>
         </div>
 
-        <div class="member-facts-right">
+        <div class="member-facts-right" style="display: none;">
             <span class="facts-title">${member.factsTitle}</span>
             <ul>
                 ${member.facts.map(fact => `<li>${fact}</li>`).join("")}
@@ -151,5 +150,12 @@ members.forEach(member => {
         </div>
     `;
 
+    // Image Interaction: Click to say Hello
+    const image = card.querySelector(".member-photo");
+    image.addEventListener("click", () => {
+        alert(`Hello! You clicked on ${member.name}! 💙`);
+    });
+
+    // Append the card to the container (Only happens once per member)
     container.appendChild(card);
 });
