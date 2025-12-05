@@ -163,7 +163,7 @@ Notable Bugs Found:
 
 - Images used belong to KOZ Entertainment / HYBE (for educational project use).
 
--Icons sourced from free icon libraries such as Flaticon.
+- Icons sourced from free icon libraries such as Flaticon.
 
 ## Acknowledgements:
 
