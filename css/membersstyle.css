@@ -75,17 +75,14 @@ body {
 }
 
 .members-title h1 {
-    background: white;
-    /* FIXED: Added solid border style and width so the color shows up */
+    background: white; /* Added solid border style and width so the color shows up */
     border: 2px solid #5DADE2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: inline-block;
     padding: 30px 150px;
-    border-radius: 15px;
-    /* Slightly more rounded */
+    border-radius: 15px; /* Slightly more rounded */
     font-family: 'Arial Black', sans-serif;
-    font-size: 45px;
-    /* Made title slightly bigger too */
+    font-size: 45px; /* Made title slightly bigger too */
     letter-spacing: 2px;
 }
 
@@ -101,14 +98,12 @@ body {
     flex-direction: row;
     background: white;
     border: 3px solid #5DADE2;
-    padding: 30px;
-    /* Increased padding slightly */
+    padding: 30px; /* Increased padding slightly */
     border-radius: 20px;
     margin-bottom: 35px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
-    gap: 30px;
-    /* Increased gap between columns */
+    gap: 30px; /* Increased gap between columns */
 }
 
 /* COLUMN 1: IMAGE */
@@ -125,7 +120,7 @@ body {
     text-align: left;
 }
 
-/* --- UPDATED: BIGGER NAME --- */
+/* --- BIGGER NAME --- */
 .member-info-middle h2 {
     font-family: 'Arial Black', sans-serif;
     color: #d32b2b;
